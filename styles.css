@@ -60,6 +60,8 @@
 }
 
 /* ============ Loading Screen ============ */
+/* Disabled - loading screen removed for faster display */
+/*
 .loader {
   position: fixed;
   inset: 0;
@@ -72,18 +74,12 @@
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-/* Fallback: hide loader after 5 seconds max (in case JS fails) */
-.loader { animation: loader-timeout 5s forwards; }
-@keyframes loader-timeout {
-  0%, 90% { opacity: 1; visibility: visible; }
-  100% { opacity: 0; visibility: hidden; pointer-events: none; }
-}
-
 .loader.hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+*/
 
 .loader__logo {
   font-family: var(--font-display);
@@ -182,14 +178,16 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
 }
 
 body {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-background);
+  color: #0F172A;
+  background-color: #FFFFFF;
+  min-height: 100vh;
 }
 
 img, svg {
@@ -494,8 +492,7 @@ h4 { font-size: 1.125rem; }
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
+  background: #FFFFFF;
   border-bottom: 1px solid var(--color-border);
   transition: var(--transition-base);
 }
