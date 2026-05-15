@@ -1,0 +1,402 @@
+/* Gamification & Rewards System Styles */
+
+/* ============ Gamification ============ */
+
+/* Points Badge */
+.points-badge {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  background: var(--color-background);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  min-width: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.points-badge:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.points-badge__header {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.points-badge__value {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.points-badge__label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--space-2);
+}
+
+.points-badge__progress {
+  margin-top: var(--space-3);
+  height: 6px;
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.points-badge__progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 0.5s ease;
+}
+
+/* Achievement Popup */
+.achievement-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: var(--color-background);
+  border: 2px solid gold;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  text-align: center;
+  animation: achievementPop 0.5s ease forwards;
+}
+
+.achievement-popup__icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+  animation: bounce 0.5s ease;
+}
+
+.achievement-popup__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: gold;
+}
+
+.achievement-popup__desc {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.achievement-popup__points {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(234, 179, 8, 0.1);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  color: gold;
+}
+
+@keyframes achievementPop {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Level Progress */
+.level-progress {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.level-progress__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.level-progress__level {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+}
+
+.level-progress__badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.level-progress__xp {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.level-progress__bar {
+  height: 12px;
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.level-progress__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #22C55E);
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.level-progress__bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Achievement Card */
+.achievement-card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-card.locked {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.achievement-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.achievement-card__info {
+  flex: 1;
+}
+
+.achievement-card__title {
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.achievement-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.achievement-card__progress {
+  height: 4px;
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-2);
+  overflow: hidden;
+}
+
+.achievement-card__progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+}
+
+/* Daily Streak */
+.daily-streak {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.daily-streak__icon {
+  font-size: 2.5rem;
+}
+
+.daily-streak__info {
+  flex: 1;
+}
+
+.daily-streak__label {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.daily-streak__count {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.daily-streak__flames {
+  display: flex;
+  gap: 4px;
+}
+
+.daily-streak__flame {
+  font-size: 1.25rem;
+}
+
+/* Rewards Catalog */
+.rewards-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.reward-item {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reward-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.reward-item.locked {
+  opacity: 0.5;
+}
+
+.reward-item__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.reward-item__name {
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.reward-item__cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.reward-item__cost.unaffordable {
+  color: var(--color-text-muted);
+}
+
+/* Leaderboard */
+.leaderboard {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.leaderboard__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.leaderboard__item:last-child {
+  border-bottom: none;
+}
+
+.leaderboard__item.current {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.leaderboard__rank {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.leaderboard__rank.gold { background: #FEF3C7; }
+.leaderboard__rank.silver { background: #F3F4F6; }
+.leaderboard__rank.bronze { background: #FED7AA; }
+
+.leaderboard__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderboard__info {
+  flex: 1;
+}
+
+.leaderboard__name {
+  font-weight: 600;
+}
+
+.leaderboard__score {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

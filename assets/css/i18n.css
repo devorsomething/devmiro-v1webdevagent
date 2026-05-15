@@ -1,0 +1,139 @@
+/* i18n - Multi-language Support */
+
+/* ============ Language Switcher ============ */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+}
+
+.lang-switcher__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-switcher__btn:hover {
+  background: var(--color-background-secondary);
+  border-color: var(--color-primary);
+}
+
+.lang-switcher__btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.lang-switcher.active .lang-switcher__btn svg {
+  transform: rotate(180deg);
+}
+
+.lang-switcher__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 150px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.lang-switcher.active .lang-switcher__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-switcher__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lang-switcher__item:first-child {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.lang-switcher__item:last-child {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.lang-switcher__item:hover {
+  background: var(--color-background-secondary);
+}
+
+.lang-switcher__item.active {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.lang-switcher__flag {
+  font-size: 1.25rem;
+}
+
+/* ============ RTL Support (for future Arabic/Hebrew) ============ */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .lang-switcher__dropdown {
+  right: auto;
+  left: 0;
+}
+
+/* ============ Translated Content ============ */
+[data-i18n] {
+  opacity: 1;
+}
+
+[data-i18n-placeholder] {
+  opacity: 1;
+}
+
+html.lang-loading [data-i18n] {
+  opacity: 0;
+}
+
+/* ============ Blog Language Badge ============ */
+.blog-post__lang-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+[dir="rtl"] .blog-post__lang-badge {
+  right: auto;
+  left: var(--space-4);
+}
+
+/* ============ Multi-language SEO ============ */
+.alternate-links {
+  display: none;
+}

@@ -1,0 +1,371 @@
+/* Customer Journey & Funnel Analytics Styles */
+
+/* ============ Funnel Visualization ============ */
+.funnel-section {
+  padding: var(--space-16) 0;
+}
+
+.funnel__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.funnel__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+}
+
+.funnel__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Funnel Container */
+.funnel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+}
+
+/* Funnel Stage */
+.funnel-stage {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: funnelFadeIn 0.6s ease forwards;
+}
+
+.funnel-stage:nth-child(1) { animation-delay: 0.1s; }
+.funnel-stage:nth-child(2) { animation-delay: 0.2s; }
+.funnel-stage:nth-child(3) { animation-delay: 0.3s; }
+.funnel-stage:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes funnelFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Funnel Bar */
+.funnel-bar {
+  position: relative;
+  height: 80px;
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.funnel-bar:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.funnel-bar__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  transition: width 1.5s ease-out;
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-6);
+}
+
+.funnel-bar__fill--awareness {
+  background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
+}
+
+.funnel-bar__fill--consideration {
+  background: linear-gradient(90deg, #6366F1 0%, #818CF8 100%);
+}
+
+.funnel-bar__fill--decision {
+  background: linear-gradient(90deg, #8B5CF6 0%, #A78BFA 100%);
+}
+
+.funnel-bar__fill--retention {
+  background: linear-gradient(90deg, #10B981 0%, #34D399 100%);
+}
+
+.funnel-bar__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.funnel-bar__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.funnel-bar__icon svg {
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+}
+
+.funnel-bar__info {
+  flex: 1;
+}
+
+.funnel-bar__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.funnel-bar__description {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.funnel-bar__metrics {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.funnel-bar__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.funnel-bar__percentage {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Drop-off Indicator */
+.funnel-dropoff {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--space-4);
+  margin-top: calc(var(--space-6) * -0.5);
+  margin-bottom: var(--space-6);
+}
+
+.funnel-dropoff__badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #EF4444;
+}
+
+.funnel-dropoff__badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Conversion Summary */
+.funnel-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.funnel-metric {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.funnel-metric:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.funnel-metric__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+}
+
+.funnel-metric__value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.funnel-metric__label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Journey Timeline */
+.journey-timeline {
+  max-width: 800px;
+  margin: var(--space-12) auto 0;
+}
+
+.journey-timeline__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.journey-step {
+  position: relative;
+  padding-left: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-left: 2px solid var(--color-border);
+}
+
+.journey-step:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.journey-step::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: var(--color-background);
+  border: 3px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.journey-step--completed::before {
+  background: var(--color-primary);
+}
+
+.journey-step__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.journey-step__icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+}
+
+.journey-step__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.journey-step__time {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.journey-step__content {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Touchpoints */
+.touchpoints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.touchpoint {
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .funnel-stage {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .funnel-bar {
+    height: auto;
+    padding: var(--space-4);
+  }
+
+  .funnel-bar__metrics {
+    text-align: left;
+    margin-top: var(--space-2);
+  }
+
+  .funnel-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .funnel-dropoff {
+    justify-content: flex-start;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .funnel-bar {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .funnel-metric {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .journey-step::before {
+    background: var(--color-dark-background, #1E293B);
+  }
+
+  .journey-step__icon {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}

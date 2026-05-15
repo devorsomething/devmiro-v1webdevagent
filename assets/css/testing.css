@@ -1,0 +1,221 @@
+/* Automated Testing & QA Styles */
+
+/* ============ Testing & QA ============ */
+.testing-panel {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 320px;
+}
+
+.testing-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-3);
+}
+
+.testing-panel__title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.testing-panel__status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.testing-panel__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+}
+
+.testing-panel__status-dot.warning { background: #F59E0B; }
+.testing-panel__status-dot.error { background: #EF4444; }
+
+.testing-panel__tests {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.testing-panel__test {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
+.testing-panel__test-pass { border-left: 3px solid #22C55E; }
+.testing-panel__test-fail { border-left: 3px solid #EF4444; }
+
+.testing-panel__test-name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.testing-panel__test-icon {
+  font-size: 1rem;
+}
+
+/* Visual Regression Indicator */
+.vr-indicator {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 9998;
+  cursor: pointer;
+}
+
+.vr-indicator.pass { border-color: #22C55E; }
+.vr-indicator.fail { border-color: #EF4444; }
+
+/* Accessibility Checker */
+.a11y-checker {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 300px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.a11y-checker__header {
+  padding: var(--space-4);
+  background: var(--color-background-secondary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.a11y-checker__issues {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.a11y-checker__issue {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.a11y-checker__issue.severity-high { border-left: 3px solid #EF4444; }
+.a11y-checker__issue.severity-medium { border-left: 3px solid #F59E0B; }
+.a11y-checker__issue.severity-low { border-left: 3px solid #3B82F6; }
+
+.a11y-checker__issue-title {
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.a11y-checker__issue-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.a11y-checker__issue-fix {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  margin-top: var(--space-1);
+  cursor: pointer;
+}
+
+/* Performance Monitor */
+.perf-monitor {
+  position: fixed;
+  top: 120px;
+  left: 24px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: 0.75rem;
+  font-family: monospace;
+  z-index: 9999;
+  min-width: 200px;
+}
+
+.perf-monitor__row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-1) 0;
+}
+
+.perf-monitor__label {
+  color: #888;
+}
+
+.perf-monitor__value {
+  color: #22C55E;
+}
+
+.perf-monitor__value.warning { color: #F59E0B; }
+.perf-monitor__value.error { color: #EF4444; }
+
+/* Console Log Viewer */
+.console-viewer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  background: #1a1a1a;
+  color: #ddd;
+  font-family: monospace;
+  font-size: 0.75rem;
+  z-index: 9999;
+  overflow-y: auto;
+  display: none;
+}
+
+.console-viewer.active {
+  display: block;
+}
+
+.console-viewer__header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2);
+  background: #333;
+  position: sticky;
+  top: 0;
+}
+
+.console-viewer__entry {
+  padding: var(--space-1) var(--space-3);
+  border-bottom: 1px solid #333;
+}
+
+.console-viewer__entry.error { color: #EF4444; }
+.console-viewer__entry.warn { color: #F59E0B; }
+.console-viewer__entry.info { color: #3B82F6; }

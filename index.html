@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevMiro - Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg. Website-Erstellung, Web Hosting, Managed Services, Cloud Solutions und mehr.">
+  <meta name="keywords" content="IT-Dienstleistungen, Webentwicklung, Hosting, Managed Services, Cloud, Vorarlberg, Österreich">
+  <meta name="author" content="DevMiro - Timo Miro Gavanelli">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="DevMiro - IT-Dienstleistungen für Unternehmen">
+  <meta property="og:description" content="Website-Erstellung, Web Hosting, Managed Services, Cloud Solutions. Alles aus einer Hand.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devmiro.at">
+  <meta property="og:image" content="https://devmiro.at/assets/images/og-image.jpg">
+  <meta property="og:locale" content="de_AT">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@devmiro_at">
+  <meta name="twitter:title" content="DevMiro - IT-Dienstleistungen für Unternehmen">
+  <meta name="twitter:description" content="Website-Erstellung, Web Hosting, Managed Services, Cloud Solutions. Alles aus einer Hand.">
+  <meta name="twitter:image" content="https://devmiro.at/assets/images/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DevMiro - IT-Dienstleistungen",
+    "description": "Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg. Website-Erstellung, Web Hosting, Managed Services, Cloud Solutions.",
+    "url": "https://devmiro.at",
+    "telephone": "+436761234567",
+    "email": "hello@devmiro.at",
+    "image": "https://devmiro.at/assets/images/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vorarlberg",
+      "addressRegion": "Vorarlberg",
+      "postalCode": "6900",
+      "addressCountry": "AT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "47.2496",
+      "longitude": "9.6397"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "€€",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Vorarlberg, Österreich"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/devmiro",
+      "https://github.com/devorsomething"
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet eine professionelle Website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Landing Pages beginnen bei €299, Business-Websites bei €799 und Enterprise-Lösungen bei €1.499+. Der finale Preis hängt von Ihren spezifischen Anforderungen ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert die Website-Erstellung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Landing Pages: 1-2 Wochen, Business-Websites: 2-4 Wochen, Enterprise: 4-8 Wochen. Komplexere Projekte können länger dauern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bieten Sie laufenden Support an?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, unsere Managed Services beginnen bei €79/Monat und umfassen regelmäßige Updates, Sicherheits-Patches und technischen Support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Arbeiten Sie nur in Vorarlberg?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir sind in Vorarlberg ansässig und bedienen primär die DACH-Region. Internationale Projekte sind nach Absprache ebenfalls möglich."
+        }
+      }
+    ]
+  }
+  </script>
+<!-- Additional Styles -->
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/breadcrumb.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link rel="stylesheet" href="assets/css/testimonials.css">
+  <link rel="stylesheet" href="assets/css/toast.css">
+  <link rel="stylesheet" href="assets/css/price-calculator.css">
+  <link rel="stylesheet" href="assets/css/video-hero.css">
+  <link rel="stylesheet" href="assets/css/timeline.css">
+  <link rel="stylesheet" href="assets/css/smart-nav.css">
+  <link rel="stylesheet" href="assets/css/before-after.css">
+  <link rel="stylesheet" href="assets/css/cookie-modal.css">
+  <link rel="stylesheet" href="assets/css/exit-intent.css">
+  <link rel="stylesheet" href="assets/css/faq.css">
+  <link rel="stylesheet" href="assets/css/performance.css">
+  <link rel="stylesheet" href="assets/css/funnel.css">
+  <link rel="stylesheet" href="assets/css/gsap-animations.css">
+  <link rel="stylesheet" href="assets/css/form-builder.css">
+  <link rel="stylesheet" href="assets/css/analytics.css">
+  <link rel="stylesheet" href="assets/css/i18n.css">
+  <link rel="stylesheet" href="assets/css/whatsapp.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <link rel="stylesheet" href="assets/css/store.css">
+  <link rel="stylesheet" href="assets/css/crm.css">
+  <link rel="stylesheet" href="assets/css/video-content.css">
+  <link rel="stylesheet" href="assets/css/team.css">
+  <link rel="stylesheet" href="assets/css/case-studies.css">
+  <link rel="stylesheet" href="assets/css/newsletter.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/chatbot.css">
+  <link rel="stylesheet" href="assets/css/ab-testing-advanced.css">
+  <link rel="stylesheet" href="assets/css/accessibility.css">
+  <link rel="stylesheet" href="assets/css/push-notifications.css">
+  <link rel="stylesheet" href="assets/css/portal.css">
+  <link rel="stylesheet" href="assets/css/onboarding.css">
+  <link rel="stylesheet" href="assets/css/configurator.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/webgl-3d.css">
+  <link rel="stylesheet" href="assets/css/voice-search.css">
+  <link rel="stylesheet" href="assets/css/virtual-tour.css">
+  <link rel="stylesheet" href="assets/css/heatmap.css">
+  <link rel="stylesheet" href="assets/css/notifications.css">
+  <link rel="stylesheet" href="assets/css/multi-currency.css">
+  <link rel="stylesheet" href="assets/css/ai-content.css">
+  <link rel="stylesheet" href="assets/css/sitemap.css">
+  <link rel="stylesheet" href="assets/css/testing.css">
+  <link rel="stylesheet" href="assets/css/edge-cdn.css">
+  <link rel="stylesheet" href="assets/css/analytics-dashboard.css">
+  <link rel="stylesheet" href="assets/css/premium-polish.css">
+  <link rel="stylesheet" href="assets/css/seo-optimizer.css">
+  <link rel="stylesheet" href="assets/css/personalization.css">
+  <link rel="stylesheet" href="assets/css/ab-testing-framework.css">
+  <link rel="stylesheet" href="assets/css/pwa-enhanced.css">
+  <link rel="stylesheet" href="assets/css/collaboration.css">
+  <link rel="stylesheet" href="assets/css/advanced-analytics.css">
+  <link rel="stylesheet" href="assets/css/recommendations.css">
+  <link rel="stylesheet" href="assets/css/gamification.css">
+  <link rel="stylesheet" href="assets/css/conversion-optimization.css">
+  <link rel="stylesheet" href="assets/css/accessibility.css">
+  <link rel="stylesheet" href="assets/css/performance.css">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#3B82F6">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>DevMiro - IT-Dienstleistungen für Unternehmen | Vorarlberg</title>
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+
+  <!-- Loading Screen -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__logo">DevMiro</div>
+    <div class="loader__spinner"></div>
+    <p class="loader__text">Laden...</p>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Nach oben scrollen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">DevMiro</a>
+        
+        <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav__links" role="menubar">
+          <li><a href="index.html" class="nav__link nav__link--active" role="menuitem">Start</a></li>
+          <li><a href="services.html" class="nav__link" role="menuitem">Leistungen</a></li>
+          <li><a href="pricing.html" class="nav__link" role="menuitem">Preise</a></li>
+          <li><a href="about.html" class="nav__link" role="menuitem">Über Mich</a></li>
+          <li><a href="contact.html" class="nav__link" role="menuitem">Kontakt</a></li>
+        </ul>
+        
+        <a href="contact.html" class="nav__cta">
+          Kostenlose Beratung
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          IT-Dienstleistungen aus Vorarlberg
+        </div>
+        
+        <h1 id="hero-title" class="hero__title">Professionelle IT-Lösungen für Ihr Unternehmen</h1>
+        
+        <p class="hero__subtitle">
+          Von Website-Erstellung bis Managed Cloud Services — ich biete ganzheitliche 
+          digitale Lösungen, die Ihr Business voranbringen. Effizient, zuverlässig und 
+          auf Ihre Bedürfnisse zugeschnitten.
+        </p>
+        
+        <div class="hero__actions">
+          <a href="services.html" class="btn btn--primary btn--large">
+            Leistungen entdecken
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="contact.html" class="btn btn--outline btn--large">Kostenlose Beratung</a>
+        </div>
+        
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-value">10+</div>
+            <div class="hero__stat-label">Jahre Erfahrung</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">98%</div>
+            <div class="hero__stat-label">Kundenzufriedenheit</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">200+</div>
+            <div class="hero__stat-label">Projekte</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">24/7</div>
+            <div class="hero__stat-label">Support</div>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero__trust">
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span>100% Zufriedenheitsgarantie</span>
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Schnelle Lieferung garantiert</span>
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <span>Transparente Preise</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section--alt" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-header__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+            Unsere Leistungen
+          </div>
+          <h2 id="services-heading" class="section-header__title">Alles was Sie für Ihre digitale Präsenz brauchen</h2>
+          <p class="section-header__subtitle">
+            Von der einfachen Landing Page bis zum kompletten Unternehmensauftritt — 
+            ich liefere maßgeschneiderte Lösungen mit höchsten Qualitätsstandards.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Website-Erstellung</h3>
+            <p class="service-card__description">
+              Moderne, performante Websites die Kunden überzeugen und Conversion steigern. 
+              Responsive Design für alle Geräte.
+            </p>
+            <ul class="service-card__features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Responsive Design
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                SEO-optimiert
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Schnelle Ladezeiten
+              </li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-card__price">ab €299 <span>/ Projekt</span></div>
+              <a href="services/website-erstellung.html" class="service-card__link">
+                Mehr erfahren
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Web Hosting</h3>
+            <p class="service-card__description">
+              Zuverlässiges Hosting mit 99.9% Uptime. Powered by moderne 
+              Infrastruktur für maximale Performance.
+            </p>
+            <ul class="service-card__features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                99.9% Uptime
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                SSL-Zertifikat
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Tägliche Backups
+              </li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-card__price">ab €19 <span>/ Monat</span></div>
+              <a href="services/web-hosting.html" class="service-card__link">
+                Mehr erfahren
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Managed Services</h3>
+            <p class="service-card__description">
+              Complete IT-Betreuung für Ihr Unternehmen. Ich kümmere mich um 
+              alles — Sie können sich auf Ihr Business konzentrieren.
+            </p>
+            <ul class="service-card__features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Proaktives Monitoring
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                24/7 Support
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Regelmäßige Updates
+              </li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-card__price">ab €79 <span>/ Monat</span></div>
+              <a href="services/managed-services.html" class="service-card__link">
+                Mehr erfahren
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Cloud Solutions</h3>
+            <p class="service-card__description">
+              Flexible Cloud-Lösungen für moderne Unternehmen. Skalierbar, sicher 
+              und cost-effektiv.
+            </p>
+            <ul class="service-card__features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                AWS & Azure Expertise
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Auto-Scaling
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Disaster Recovery
+              </li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-card__price">ab €49 <span>/ Monat</span></div>
+              <a href="services/cloud-solutions.html" class="service-card__link">
+                Mehr erfahren
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">SEO & Marketing</h3>
+            <p class="service-card__description">
+              Gefunden werden von Kunden die nach Ihren Services suchen. 
+              Data-Driven Marketing für messbare Ergebnisse.
+            </p>
+            <ul class="service-card__features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                On-Page SEO
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Keyword Research
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Performance Analytics
+              </li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-card__price">ab €99 <span>/ Monat</span></div>
+              <a href="services/seo-marketing.html" class="service-card__link">
+                Mehr erfahren
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">IT-Sicherheit</h3>
+            <p class="service-card__description">
+              Umfassender Schutz für Ihre digitale Infrastruktur. 
+              Von Firewall bis Employee Training.
+            </p>
+            <ul class="service-card__features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Security Audits
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Endpoint Protection
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Compliance (DSGVO)
+              </li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-card__price">ab €149 <span>/ Monat</span></div>
+              <a href="services/it-sicherheit.html" class="service-card__link">
+                Mehr erfahren
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-12);">
+          <a href="services.html" class="btn btn--outline btn--large">
+            Alle Leistungen ansehen
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- Process Section - Interactive Timeline -->
+    <section class="timeline-section section" aria-labelledby="process-heading">
+      <div class="container">
+        <header class="timeline-section__header">
+          <div class="timeline-section__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Unser Prozess
+          </div>
+          <h2 id="process-heading" class="timeline-section__title">So arbeiten wir zusammen</h2>
+          <p class="timeline-section__subtitle">
+            Ein transparenter, strukturierter Ablauf der Sie durchgehend informiert hält 
+            und qualitativ hochwertige Ergebnisse liefert. Klicken Sie auf jeden Schritt für mehr Details.
+          </p>
+        </header>
+
+        <div class="timeline timeline-interactive">
+          <div class="timeline-progress"></div>
+
+          <!-- Step 1 -->
+          <div class="timeline-item" data-step="1">
+            <div class="timeline-marker">
+              <span class="timeline-marker__number">1</span>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-content">
+              <div class="timeline-content__header">
+                <div class="timeline-content__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
+                <div class="timeline-content__info">
+                  <span class="timeline-content__step">Schritt 1</span>
+                  <h3 class="timeline-content__title">Kostenloses Erstgespräch</h3>
+                </div>
+              </div>
+              <p class="timeline-content__description">
+                In einem unverbindlichen Gespräch lernen wir uns kennen und ich verstehe Ihre Anforderungen, 
+                Ziele und Budget. Wir besprechen die Möglichkeiten und finden die beste Lösung für Ihr Projekt.
+              </p>
+              <button class="timeline-expand">
+                Mehr Details
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="timeline-details">
+                <div class="timeline-details__content">
+                  <ul class="timeline-details__list">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Bedürfnis-Analyse
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Budget-Kalkulation
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Zeitrahmen-Planung
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Technische Machbarkeit
+                    </li>
+                  </ul>
+                  <span class="timeline-details__duration">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    30 Minuten
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-item" data-step="2">
+            <div class="timeline-marker">
+              <span class="timeline-marker__number">2</span>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-content">
+              <div class="timeline-content__header">
+                <div class="timeline-content__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                    <path d="M2 2l7.586 7.586"/>
+                  </svg>
+                </div>
+                <div class="timeline-content__info">
+                  <span class="timeline-content__step">Schritt 2</span>
+                  <h3 class="timeline-content__title">Design & Konzept</h3>
+                </div>
+              </div>
+              <p class="timeline-content__description">
+                Erstellung eines maßgeschneiderten Konzepts passend zu Ihrer Marke. 
+                Wireframes, Design-Entwürfe und iterative Feedback-Schleifen bis zur finalen Freigabe.
+              </p>
+              <button class="timeline-expand">
+                Mehr Details
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="timeline-details">
+                <div class="timeline-details__content">
+                  <ul class="timeline-details__list">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Wireframes & Prototypen
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Design-Entwürfe
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Responsive-Optimierung
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Feedback-Schleife
+                    </li>
+                  </ul>
+                  <span class="timeline-details__duration">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3-5 Tage
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-item" data-step="3">
+            <div class="timeline-marker">
+              <span class="timeline-marker__number">3</span>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-content">
+              <div class="timeline-content__header">
+                <div class="timeline-content__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <div class="timeline-content__info">
+                  <span class="timeline-content__step">Schritt 3</span>
+                  <h3 class="timeline-content__title">Entwicklung</h3>
+                </div>
+              </div>
+              <p class="timeline-content__description">
+                Technische Umsetzung mit höchster Qualität. Regelmäßige Updates während 
+                der Entwicklung, damit Sie den Fortschritt verfolgen können.
+              </p>
+              <button class="timeline-expand">
+                Mehr Details
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="timeline-details">
+                <div class="timeline-details__content">
+                  <ul class="timeline-details__list">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Responsive Entwicklung
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Performance-Optimierung
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      SEO-Grundlagen
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Regelmäßige Updates
+                    </li>
+                  </ul>
+                  <span class="timeline-details__duration">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    2-4 Wochen
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-item" data-step="4">
+            <div class="timeline-marker">
+              <span class="timeline-marker__number">4</span>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-content">
+              <div class="timeline-content__header">
+                <div class="timeline-content__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <div class="timeline-content__info">
+                  <span class="timeline-content__step">Schritt 4</span>
+                  <h3 class="timeline-content__title">Launch & Support</h3>
+                </div>
+              </div>
+              <p class="timeline-content__description">
+                Publikation und laufende Betreuung. Gönntransfer, Schulung und 
+                technischer Support damit Sie Ihre Website erfolgreich nutzen können.
+              </p>
+              <button class="timeline-expand">
+                Mehr Details
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="timeline-details">
+                <div class="timeline-details__content">
+                  <ul class="timeline-details__list">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Go-Live Prozess
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Schulung & Dokumentation
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Wartung & Support
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Monitoring & Analyse
+                    </li>
+                  </ul>
+                  <span class="timeline-details__duration">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    1-2 Wochen
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Summary -->
+        <div class="timeline-summary">
+          <div class="timeline-summary__item">
+            <div class="timeline-summary__value">4</div>
+            <div class="timeline-summary__label">Schritte zum Erfolg</div>
+          </div>
+          <div class="timeline-summary__item">
+            <div class="timeline-summary__value">1-4</div>
+            <div class="timeline-summary__label">Wochen Gesamt</div>
+          </div>
+          <div class="timeline-summary__item">
+            <div class="timeline-summary__value">100%</div>
+            <div class="timeline-summary__label">Kundenzufriedenheit</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section--alt" aria-labelledby="faq-heading">
+      <div class="container" style="max-width: 800px;">
+        <header class="section-header">
+          <div class="section-header__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            FAQ
+          </div>
+          <h2 id="faq-heading" class="section-header__title">Häufig gestellte Fragen</h2>
+        </header>
+
+        <div class="faq">
+          <div class="faq__item active">
+            <button class="faq__question" aria-expanded="true">
+              Was kostet eine professionelle Website?
+              <span class="faq__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq__answer" style="max-height: 500px;">
+              <p>
+                Landing Pages beginnen bei €299, Business-Websites bei €799 und Enterprise-Lösungen bei €1.499+. 
+                Der finale Preis hängt von Ihren spezifischen Anforderungen ab — Seitenumfang, Design-Komplexität, 
+                Integrationen und Funktionen. In einem kostenlosen Erstgespräch erstelle ich Ihnen ein verbindliches Angebot.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Wie lange dauert die Erstellung?
+              <span class="faq__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Landing Pages: 1-2 Wochen, Business-Websites: 2-4 Wochen, Enterprise: 4-8 Wochen. 
+                Komplexere Projekte mit individuellen Features können länger dauern. 
+                Ich arbeite effizient und halte Sie durchgehend über den Fortschritt informiert.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Bieten Sie laufenden Support an?
+              <span class="faq__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Ja! Unsere Managed Services beginnen bei €79/Monat und umfassen regelmäßige Updates, 
+                Sicherheits-Patches, Monitoring und technischen Support. So können Sie sich auf Ihr 
+                Business konzentrieren während ich mich um Ihre IT kümmere.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Arbeiten Sie nur mit Unternehmen in Vorarlberg?
+              <span class="faq__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Ich bin in Vorarlberg ansässig und arbeite primär mit Unternehmen aus Österreich und der 
+                DACH-Region. Aber auch internationale Projekte sind möglich — sprechen Sie mich einfach an!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Testimonials Section -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <header class="testimonials__header">
+          <div class="testimonials__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Kundenstimmen
+          </div>
+          <h2 id="testimonials-heading" class="testimonials__title">Was unsere Kunden sagen</h2>
+          <p class="testimonials__subtitle">
+            Erfahren Sie von Unternehmen die mit DevMiro zusammenarbeiten.
+          </p>
+        </header>
+
+        <div class="testimonials-carousel">
+          <div class="testimonials-track">
+            <!-- Testimonials loaded via JS -->
+          </div>
+          
+          <button class="testimonials-nav testimonials-nav--prev" aria-label="Vorheriges Testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          
+          <button class="testimonials-nav testimonials-nav--next" aria-label="Nächstes Testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="testimonials-dots">
+          <!-- Dots loaded via JS -->
+        </div>
+
+        <div class="testimonials-autoplay">
+          <button class="testimonials-autoplay__toggle active" aria-label="Automatische Wiedergabe aktiviert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Auto-Play
+          </button>
+          <div class="testimonials-autoplay__progress">
+            <div class="testimonials-autoplay__progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Calculator Section -->
+    <section class="section" aria-labelledby="calculator-heading">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-header__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="2" width="16" height="20" rx="2"/>
+              <line x1="8" y1="6" x2="16" y2="6"/>
+              <line x1="8" y1="10" x2="16" y2="10"/>
+              <line x1="8" y1="14" x2="12" y2="14"/>
+            </svg>
+            Preisrechner
+          </div>
+          <h2 id="calculator-heading" class="section-header__title">Berechnen Sie Ihren Projektpreis</h2>
+          <p class="section-header__subtitle">
+            Passen Sie die Parameter an und sehen Sie sofort eine Schätzung für Ihr Projekt.
+          </p>
+        </header>
+
+        <div class="price-calculator">
+          <div class="calculator-form">
+            <!-- Pages Slider -->
+            <div class="calculator-section">
+              <h3 class="calculator-section__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                Anzahl der Seiten
+              </h3>
+              <div class="slider-group">
+                <div class="slider-group__header">
+                  <span class="slider-group__label">Seiten</span>
+                  <span class="slider-group__value" id="pagesValue">5</span>
+                </div>
+                <input type="range" id="pagesSlider" class="range-slider" min="1" max="20" value="5">
+              </div>
+              <div class="calculator-breakdown__item">
+                <span class="calculator-breakdown__label">Seiten-Preis</span>
+                <span class="calculator-breakdown__value">€<span id="pagesPrice">500</span></span>
+              </div>
+            </div>
+
+            <!-- Features Slider -->
+            <div class="calculator-section">
+              <h3 class="calculator-section__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+                Features & Funktionen
+              </h3>
+              <div class="slider-group">
+                <div class="slider-group__header">
+                  <span class="slider-group__label">Features</span>
+                  <span class="slider-group__value" id="featuresValue">3</span>
+                </div>
+                <input type="range" id="featuresSlider" class="range-slider" min="1" max="10" value="3">
+              </div>
+              <div class="calculator-breakdown__item">
+                <span class="calculator-breakdown__label">Features-Preis</span>
+                <span class="calculator-breakdown__value">€<span id="featuresPrice">450</span></span>
+              </div>
+            </div>
+
+            <!-- Add-ons -->
+            <div class="calculator-section">
+              <h3 class="calculator-section__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="16"/>
+                  <line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+                Zusatzleistungen (Add-ons)
+              </h3>
+              <div class="addons-grid">
+                <label class="addon-checkbox">
+                  <input type="checkbox" value="seo">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">SEO-Optimierung</span>
+                      <span class="addon-checkbox__price">+€200</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" value="analytics">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">Analytics Integration</span>
+                      <span class="addon-checkbox__price">+€100</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" value="contact-form">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">Kontaktformular</span>
+                      <span class="addon-checkbox__price">+€80</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" value="cms">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">CMS-Integration</span>
+                      <span class="addon-checkbox__price">+€250</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" value="ecommerce">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">E-Commerce</span>
+                      <span class="addon-checkbox__price">+€500</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" value="multilanguage">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">Mehrsprachigkeit</span>
+                      <span class="addon-checkbox__price">+€300</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="calculator-section">
+              <h3 class="calculator-section__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Zeitrahmen
+              </h3>
+              <div class="addons-grid">
+                <label class="addon-checkbox">
+                  <input type="radio" name="timeline" value="standard" checked>
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">Standard (4-8 Wochen)</span>
+                      <span class="addon-checkbox__price">Normalpreis</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="radio" name="timeline" value="express">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">Express (1-2 Wochen)</span>
+                      <span class="addon-checkbox__price">+15% Aufschlag</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="radio" name="timeline" value="flexible">
+                  <span class="addon-checkbox__label">
+                    <span class="addon-checkbox__check">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                    </span>
+                    <span class="addon-checkbox__info">
+                      <span class="addon-checkbox__name">Flexibel (8-12 Wochen)</span>
+                      <span class="addon-checkbox__price">-10% Rabatt</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Total -->
+            <div class="calculator-total">
+              <div class="calculator-total__label">Geschätzter Projektpreis</div>
+              <div class="calculator-total__price">€<span id="totalPrice">1.450</span></div>
+              <div class="calculator-total__note">Unverbindliche Schätzung — für ein genaues Angebot kontaktieren Sie uns.</div>
+            </div>
+
+            <!-- CTA -->
+            <div class="calculator-cta">
+              <a href="contact.html" class="btn btn--primary btn--large">
+                Jetzt Angebot anfordern — €1.450
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="services.html" class="btn btn--outline btn--large">
+                Alle Leistungen ansehen
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section--alt" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <header class="portfolio__header">
+          <div class="portfolio__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Referenzen
+          </div>
+          <h2 id="portfolio-heading" class="portfolio__title">Ausgewählte Projekte</h2>
+          <p class="portfolio__subtitle">
+            Entdecken Sie eine Auswahl unserer erfolgreich umgesetzten Projekte.
+          </p>
+        </header>
+
+        <div class="portfolio-filter">
+          <button class="portfolio-filter__btn active" data-filter="all">Alle</button>
+          <button class="portfolio-filter__btn" data-filter="website">Websites</button>
+          <button class="portfolio-filter__btn" data-filter="webapp">WebApps</button>
+          <button class="portfolio-filter__btn" data-filter="branding">Branding</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Portfolio Items loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" role="dialog" aria-label="Projekt-Galerie">
+      <button class="lightbox__close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="lightbox__counter">1 / 6</div>
+      <button class="lightbox__nav lightbox__nav--prev" aria-label="Vorheriges Projekt">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button class="lightbox__nav lightbox__nav--next" aria-label="Nächstes Projekt">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div class="lightbox__content">
+        <img src="" alt="" class="lightbox__image">
+        <div class="lightbox__info">
+          <h3 class="lightbox__title"></h3>
+          <p class="lightbox__description"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 class="cta__title">Bereit, Ihre IT auf das nächste Level zu bringen?</h2>
+        <p class="cta__subtitle">
+          Lassen Sie uns gemeinsam besprechen, wie ich Ihre digitalen Herausforderungen lösen kann.
+          Kostenlose Erstberatung — unverbindlich und ohne Verpflichtung.
+        </p>
+        <div class="cta__actions">
+          <a href="contact.html" class="btn btn--primary btn--large">
+            Kostenlose Beratung buchen
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="services.html" class="btn btn--outline btn--large" style="border-color: white; color: white;">
+            Alle Leistungen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">DevMiro</div>
+          <p class="footer__tagline">
+            Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg und Österreich.
+          </p>
+          <div class="footer__social">
+            <a href="https://linkedin.com/company/devmiro" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://github.com/devorsomething" aria-label="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Leistungen</h4>
+          <ul class="footer__links">
+            <li><a href="services/website-erstellung.html">→ Website-Erstellung</a></li>
+            <li><a href="services/web-hosting.html">→ Web Hosting</a></li>
+            <li><a href="services/managed-services.html">→ Managed Services</a></li>
+            <li><a href="services/cloud-solutions.html">→ Cloud Solutions</a></li>
+            <li><a href="services/seo-marketing.html">→ SEO & Marketing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Weitere Services</h4>
+          <ul class="footer__links">
+            <li><a href="services/it-sicherheit.html">→ IT-Sicherheit</a></li>
+            <li><a href="services/softwareentwicklung.html">→ Softwareentwicklung</a></li>
+            <li><a href="services/it-beratung.html">→ IT-Beratung</a></li>
+            <li><a href="services/email-kommunikation.html">→ E-Mail & Kommunikation</a></li>
+            <li><a href="services/wartung-support.html">→ Wartung & Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Kontakt</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@devmiro.at">→ hello@devmiro.at</a></li>
+            <li><a href="tel:+436761234567">→ +43 676 1234567</a></li>
+            <li>Vorarlberg, Österreich</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>© 2024 DevMiro — Timo Miro Gavanelli. Alle Rechte vorbehalten.</p>
+        <div class="footer__bottom-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="contact.html" class="btn btn--primary">
+      Jetzt Beratung anfragen
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/436761234567?text=Hallo,%20ich%20interessiere%20mich%20für%20Ihre%20IT-Dienstleistungen." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+    <span class="whatsapp-btn__tooltip">Chatten Sie mit uns!</span>
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+    <div class="cookie-consent__inner">
+      <div class="cookie-consent__text">
+        <h4 id="cookie-title">🍪 Wir verwenden Cookies</h4>
+        <p id="cookie-desc">Diese Website verwendet Cookies, um Ihnen ein optimales Erlebnis zu bieten. <a href="datenschutz.html">Mehr erfahren</a></p>
+      </div>
+      <div class="cookie-consent__actions">
+        <button class="cookie-consent__settings">Einstellungen</button>
+        <button class="cookie-consent__accept">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Lottie Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
+
+  <!-- GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/price-calculator.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/testimonials.js"></script>
+  <script src="assets/js/lottie-animations.js"></script>
+  <script src="assets/js/timeline.js"></script>
+  <script src="assets/js/smart-nav.js"></script>
+  <script src="assets/js/before-after.js"></script>
+  <script src="assets/js/cookie-modal.js"></script>
+  <script src="assets/js/exit-intent.js"></script>
+  <script src="assets/js/chat-widget.js"></script>
+  <script src="assets/js/faq.js"></script>
+  <script src="assets/js/performance.js"></script>
+  <script src="assets/js/ab-testing.js"></script>
+  <script src="assets/js/funnel.js"></script>
+  <script src="assets/js/gsap-animations.js"></script>
+  <script src="assets/js/form-builder.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/blog.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/crm.js"></script>
+  <script src="assets/js/video-content.js"></script>
+  <script src="assets/js/team.js"></script>
+  <script src="assets/js/case-studies.js"></script>
+  <script src="assets/js/newsletter.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script src="assets/js/ab-testing-advanced.js"></script>
+  <script src="assets/js/accessibility.js"></script>
+  <script src="assets/js/push-notifications.js"></script>
+  <script src="assets/js/portal.js"></script>
+  <script src="assets/js/onboarding.js"></script>
+  <script src="assets/js/configurator.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/webgl-3d.js"></script>
+  <script src="assets/js/voice-search.js"></script>
+  <script src="assets/js/virtual-tour.js"></script>
+  <script src="assets/js/heatmap.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/multi-currency.js"></script>
+  <script src="assets/js/ai-content.js"></script>
+  <script src="assets/js/sitemap.js"></script>
+  <script src="assets/js/testing.js"></script>
+  <script src="assets/js/edge-cdn.js"></script>
+  <script src="assets/js/analytics-dashboard.js"></script>
+  <script src="assets/js/premium-polish.js"></script>
+  <script src="assets/js/seo-optimizer.js"></script>
+  <script src="assets/js/personalization.js"></script>
+  <script src="assets/js/ab-testing-framework.js"></script>
+  <script src="assets/js/pwa-enhanced.js"></script>
+  <script src="assets/js/collaboration.js"></script>
+  <script src="assets/js/advanced-analytics.js"></script>
+  <script src="assets/js/recommendations.js"></script>
+  <script src="assets/js/gamification.js"></script>
+  <script src="assets/js/conversion-optimization.js"></script>
+  <script src="assets/js/accessibility.js"></script>
+  <script src="assets/js/performance.js"></script>
+
+  <!-- Snipcart E-commerce Integration -->
+  <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
+  <link href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" rel="stylesheet">
+  <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('SW registered:', registration.scope);
+          })
+          .catch(error => {
+            console.log('SW registration failed:', error);
+          });
+      });
+    }
+  </script>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/4366012345678?text=Hallo%20DevMiro,%20ich%20interessiere%20mich%20für%20Ihre%20IT-Dienstleistungen.%20Könnten%20Sie%20mir%20mehr%20dazu%20erzählen?" 
+     class="whatsapp-float__btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat auf WhatsApp"
+     title="Schreiben Sie uns auf WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__tooltip">Schreiben Sie uns!</span>
+    <span class="whatsapp-float__status"></span>
+  </a>
+
+</body>
+</html>

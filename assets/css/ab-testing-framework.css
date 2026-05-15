@@ -1,0 +1,205 @@
+/* Automated A/B Testing Framework Styles */
+
+/* ============ A/B Testing Framework ============ */
+.ab-test-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+  font-size: 0.875rem;
+  z-index: 10000;
+  display: none;
+}
+
+.ab-test-banner.active {
+  display: block;
+}
+
+.ab-test-variant-selector {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  min-width: 320px;
+}
+
+.ab-test-variant-selector__header {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ab-test-variant-selector__tests {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ab-test-item {
+  padding: var(--space-3);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.ab-test-item__name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-2);
+}
+
+.ab-test-item__variants {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.ab-test-variant-btn {
+  flex: 1;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  background: white;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ab-test-variant-btn:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.ab-test-variant-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Test Result Badge */
+.ab-result-badge {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 250px;
+}
+
+.ab-result-badge__winner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-3);
+}
+
+.ab-result-badge__variant-name {
+  font-weight: 700;
+}
+
+.ab-result-badge__lift {
+  color: #22C55E;
+  font-weight: 600;
+}
+
+.ab-result-badge__confidence {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Statistical Significance Indicator */
+.significance-meter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.significance-meter__bar {
+  flex: 1;
+  height: 8px;
+  background: var(--color-background-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.significance-meter__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #F59E0B, #22C55E);
+  transition: width 0.5s ease;
+}
+
+.significance-meter__label {
+  font-size: 0.75rem;
+  min-width: 80px;
+}
+
+/* Multi-Armed Bandit */
+.bandit-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(168, 85, 247, 0.1);
+  color: #A855F7;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Heatmap Toggle */
+.heatmap-toggle {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 9999;
+}
+
+.heatmap-toggle__btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.heatmap-toggle__btn:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.heatmap-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.heatmap-overlay.click {
+  background: radial-gradient(circle at var(--x) var(--y), rgba(239, 68, 68, 0.3) 0%, transparent 30%);
+}

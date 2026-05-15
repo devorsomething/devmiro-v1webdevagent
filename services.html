@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alle IT-Dienstleistungen von DevMiro. Website-Erstellung, Hosting, Managed Services, Cloud, SEO, Security und mehr.">
+  <title>Leistungen | DevMiro - IT-Dienstleistungen für Unternehmen</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">DevMiro</a>
+        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Start</a></li>
+          <li><a href="services.html" class="nav__link nav__link--active">Leistungen</a></li>
+          <li><a href="pricing.html" class="nav__link">Preise</a></li>
+          <li><a href="about.html" class="nav__link">Über Mich</a></li>
+          <li><a href="contact.html" class="nav__link">Kontakt</a></li>
+        </ul>
+        <a href="contact.html" class="nav__cta">Kostenlose Beratung</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
+    <div class="container">
+      <div class="hero__badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
+        </svg>
+        Leistungen
+      </div>
+      <h1 class="hero__title">10 IT-Dienstleistungen — alles aus einer Hand</h1>
+      <p class="hero__subtitle">
+        Von der ersten Website bis zur kompletten Cloud-Infrastruktur. 
+        Ich biete ganzheitliche digitale Lösungen für Unternehmen in Vorarlberg.
+      </p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn btn--primary btn--large">Kostenlose Beratung</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Alle Services
+        </div>
+        <h2 class="section-header__title">Was ich für Sie tun kann</h2>
+      </header>
+      
+      <div class="grid grid--2">
+        <a href="services/website-erstellung.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <circle cx="8" cy="15" r="2"/>
+              <path d="M21 15l-5-5"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Website-Erstellung</h3>
+          <p class="service-card__description">Individuelle Websites, die Ihre Marke repräsentieren und Besucher in Kunden verwandeln.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €299 <span>/ Projekt</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/web-hosting.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Web Hosting</h3>
+          <p class="service-card__description">Zuverlässiges Hosting mit Top-Performance, SSD-Speicher und deutscher Serverinfrastruktur.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €19 <span>/ Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/managed-services.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Managed Services</h3>
+          <p class="service-card__description">Voller Managed-Service mit Monitoring, Updates und proaktivem Support.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €149 <span>/ Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/cloud-solutions.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Cloud Solutions</h3>
+          <p class="service-card__description">Flexible Cloud-Infrastruktur für Ihr Business — skalierbar, sicher und kosteneffizient.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €299 <span>/ Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/seo-marketing.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">SEO & Marketing</h3>
+          <p class="service-card__description">Gefunden werden und Leads generieren — mit datengetriebenem SEO und Online-Marketing.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €149 <span>/ Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/it-sicherheit.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">IT-Sicherheit</h3>
+          <p class="service-card__description">Umfassender Schutz für Ihre digitale Infrastruktur — von Firewall bis Penetrationstest.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €199 <span>/ Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/softwareentwicklung.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Softwareentwicklung</h3>
+          <p class="service-card__description">Maßgeschneiderte Softwarelösungen — von Web-Apps bis komplexen Business-Anwendungen.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €89 <span>/ Stunde</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/it-beratung.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">IT-Beratung</h3>
+          <p class="service-card__description">Strategische IT-Beratung für KMUs — von der Digitalisierungsstrategie bis zur Umsetzung.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €129 <span>/ Stunde</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/email-kommunikation.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">E-Mail & Kommunikation</h3>
+          <p class="service-card__description">Professionelle Business-E-Mail-Lösungen — sicher, zuverlässig und DSGVO-konform.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €5 <span>/ Postfach / Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+        
+        <a href="services/wartung-support.html" class="service-card" style="text-decoration: none;">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Wartung & Support</h3>
+          <p class="service-card__description">Laufende Wartung und technischer Support für Ihre IT-Systeme.</p>
+          <div class="service-card__footer">
+            <div class="service-card__price">ab €79 <span>/ Monat</span></div>
+            <span class="card__link" style="color: var(--color-accent);">
+              Mehr erfahren →
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta__title">Brauchen Sie mehrere Services?</h2>
+      <p class="cta__subtitle">Ich erstelle Ihnen gerne ein maßgeschneidertes Paket zu besonderen Konditionen.</p>
+      <div class="cta__actions">
+        <a href="contact.html" class="btn btn--primary btn--large">Paket anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand"><div class="footer__logo">DevMiro</div><p class="footer__tagline">IT-Dienstleistungen für Vorarlberg.</p></div>
+        <div class="footer__column"><h4>Leistungen</h4><ul class="footer__links"><li><a href="services/website-erstellung.html">Website-Erstellung</a></li><li><a href="services/web-hosting.html">Web Hosting</a></li><li><a href="services/managed-services.html">Managed Services</a></li><li><a href="services/cloud-solutions.html">Cloud Solutions</a></li></ul></div>
+        <div class="footer__column"><h4>Weitere</h4><ul class="footer__links"><li><a href="services/it-sicherheit.html">IT-Sicherheit</a></li><li><a href="services/softwareentwicklung.html">Softwareentwicklung</a></li><li><a href="services/it-beratung.html">IT-Beratung</a></li></ul></div>
+        <div class="footer__column"><h4>Kontakt</h4><ul class="footer__links"><li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li><li><a href="tel:+436761234567">+43 676 1234567</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><p>© 2024 DevMiro</p><div class="footer__bottom-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

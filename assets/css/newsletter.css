@@ -1,0 +1,200 @@
+/* Email Marketing / Newsletter Styles */
+
+/* ============ Newsletter Section ============ */
+.newsletter {
+  padding: var(--space-16) 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+}
+
+.newsletter__container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter__icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+}
+
+.newsletter__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.newsletter__subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.newsletter-form__row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.newsletter-form__input {
+  flex: 1;
+  padding: var(--space-4);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+.newsletter-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.newsletter-form__input.error {
+  border-color: #EF4444;
+}
+
+.newsletter-form__btn {
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.newsletter-form__btn:hover {
+  background: #2563EB;
+  transform: translateY(-2px);
+}
+
+.newsletter-form__btn:disabled {
+  background: var(--color-text-muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Privacy Note */
+.newsletter-form__privacy {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.newsletter-form__privacy a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Success State */
+.newsletter-form__success {
+  padding: var(--space-8);
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  border: 1px solid #10B981;
+}
+
+.newsletter-form__success-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+}
+
+.newsletter-form__success-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #10B981;
+  margin-bottom: var(--space-2);
+}
+
+.newsletter-form__success-message {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* Benefits */
+.newsletter__benefits {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.newsletter__benefit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.newsletter__benefit-icon {
+  color: #10B981;
+}
+
+/* Email Capture Types */
+.email-capture {
+  padding: var(--space-12) 0;
+}
+
+.email-capture__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.email-capture__card {
+  padding: var(--space-6);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.email-capture__card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.email-capture__card-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.email-capture__card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.email-capture__card-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-form__row {
+    flex-direction: column;
+  }
+  
+  .newsletter__benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}

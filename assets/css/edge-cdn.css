@@ -1,0 +1,195 @@
+/* Edge Computing & CDN Integration Styles */
+
+/* ============ Edge & CDN ============ */
+
+/* CDN Status Indicator */
+.cdn-status {
+  position: fixed;
+  top: 80px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  z-index: 9998;
+}
+
+.cdn-status__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.cdn-status__dot.slow { background: #F59E0B; animation-duration: 3s; }
+.cdn-status__dot.offline { background: #EF4444; animation: none; }
+
+/* Edge Cache Visualizer */
+.edge-cache-viz {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 280px;
+}
+
+.edge-cache-viz__title {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.edge-cache-viz__nodes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.edge-cache-viz__node {
+  padding: var(--space-3);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.edge-cache-viz__node.active {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid #22C55E;
+}
+
+.edge-cache-viz__node-region {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.edge-cache-viz__node-status {
+  color: #22C55E;
+  font-size: 0.625rem;
+}
+
+.edge-cache-viz__stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.edge-cache-viz__stat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+.edge-cache-viz__stat-label {
+  color: var(--color-text-muted);
+}
+
+.edge-cache-viz__stat-value {
+  font-weight: 600;
+}
+
+/* Speed Test Widget */
+.speed-test {
+  padding: var(--space-6);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-xl);
+  margin-top: var(--space-6);
+}
+
+.speed-test__title {
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.speed-test__bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80px;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.speed-test__bar {
+  flex: 1;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: height 0.5s ease;
+}
+
+.speed-test__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Resource Hints */
+.resource-hints {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 250px;
+}
+
+.resource-hints__title {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.resource-hints__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.resource-hints__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+}
+
+.resource-hints__status {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.resource-hints__status.preload { color: #22C55E; }
+.resource-hints__status.prefetch { color: #3B82F6; }
+.resource-hints__status.preconnect { color: #F59E0B; }

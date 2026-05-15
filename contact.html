@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontaktieren Sie DevMiro. Kostenlose Erstberatung für Ihre IT-Projekte. hello@devmiro.at oder +43 676 1234567">
+  <title>Kontakt | DevMiro</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Additional Styles -->
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/breadcrumb.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+
+  <!-- Loading Screen -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__logo">DevMiro</div>
+    <div class="loader__spinner"></div>
+    <p class="loader__text">Laden...</p>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Nach oben scrollen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">DevMiro</a>
+        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Start</a></li>
+          <li><a href="services.html" class="nav__link">Leistungen</a></li>
+          <li><a href="pricing.html" class="nav__link">Preise</a></li>
+          <li><a href="about.html" class="nav__link">Über Mich</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active">Kontakt</a></li>
+        </ul>
+        <a href="contact.html" class="nav__cta">Kostenlose Beratung</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
+      <div class="container">
+        <div class="hero__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Kontakt
+        </div>
+        <h1 class="hero__title">Sprechen wir über Ihr Projekt</h1>
+        <p class="hero__subtitle">
+          Kostenlose Erstberatung — ich höre zu, stelle Fragen und finde die beste Lösung für Ihre Herausforderung.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-16);">
+          
+          <!-- Multi-Step Form -->
+          <div>
+            <h2 style="margin-bottom: var(--space-6);">Anfrage senden</h2>
+            
+            <div class="form-autosave" id="formAutosave">
+              <svg class="form-autosave__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+              <span>Automatisches Speichern aktiv</span>
+            </div>
+
+            <form class="multi-step-form" id="contactForm" action="#" method="POST">
+              <!-- Progress -->
+              <div class="form-progress">
+                <div class="form-progress__line" id="progressLine"></div>
+                
+                <div class="form-progress__step active" data-step="1">
+                  <div class="form-progress__number">1</div>
+                  <div class="form-progress__label">Kontakt</div>
+                </div>
+                
+                <div class="form-progress__step" data-step="2">
+                  <div class="form-progress__number">2</div>
+                  <div class="form-progress__label">Projekt</div>
+                </div>
+                
+                <div class="form-progress__step" data-step="3">
+                  <div class="form-progress__number">3</div>
+                  <div class="form-progress__label">Budget</div>
+                </div>
+              </div>
+
+              <!-- Step 1: Contact -->
+              <div class="form-step active" data-step="1">
+                <h3 class="form-step__title">Ihre Kontaktdaten</h3>
+                <p class="form-step__subtitle">Wie kann ich Sie erreichen?</p>
+                
+                <div class="form-group">
+                  <label class="form-group__label" for="name">
+                    Name <span class="required">*</span>
+                  </label>
+                  <input type="text" id="name" name="name" class="form-group__input" required placeholder="Max Mustermann">
+                  <p class="form-group__error">Bitte geben Sie Ihren Namen ein</p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group__label" for="email">
+                    E-Mail <span class="required">*</span>
+                  </label>
+                  <input type="email" id="email" name="email" class="form-group__input" required placeholder="ihre@email.at">
+                  <p class="form-group__error">Bitte geben Sie eine gültige E-Mail ein</p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group__label" for="phone">
+                    Telefon
+                  </label>
+                  <input type="tel" id="phone" name="phone" class="form-group__input" placeholder="+43 676 1234567">
+                  <p class="form-group__hint">Optional — für Rückrufe</p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group__label" for="company">
+                    Unternehmen
+                  </label>
+                  <input type="text" id="company" name="company" class="form-group__input" placeholder="Ihre Firma GmbH">
+                </div>
+              </div>
+
+              <!-- Step 2: Project Details -->
+              <div class="form-step" data-step="2">
+                <h3 class="form-step__title">Ihr Projekt</h3>
+                <p class="form-step__subtitle">Was möchten Sie umsetzen?</p>
+                
+                <div class="form-group">
+                  <label class="form-group__label">
+                    Service-Interesse <span class="required">*</span>
+                  </label>
+                  <div class="form-checkbox-group">
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="service-website" name="service[]" value="website" class="form-checkbox__input">
+                      <label for="service-website" class="form-checkbox__label">Website-Erstellung</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="service-hosting" name="service[]" value="hosting" class="form-checkbox__input">
+                      <label for="service-hosting" class="form-checkbox__label">Web Hosting</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="service-managed" name="service[]" value="managed" class="form-checkbox__input">
+                      <label for="service-managed" class="form-checkbox__label">Managed Services</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="service-cloud" name="service[]" value="cloud" class="form-checkbox__input">
+                      <label for="service-cloud" class="form-checkbox__label">Cloud Solutions</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="service-seo" name="service[]" value="seo" class="form-checkbox__input">
+                      <label for="service-seo" class="form-checkbox__label">SEO & Marketing</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="service-security" name="service[]" value="security" class="form-checkbox__input">
+                      <label for="service-security" class="form-checkbox__label">IT-Sicherheit</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group__label" for="timeline">
+                    Zeitrahmen <span class="required">*</span>
+                  </label>
+                  <div class="timeline-grid">
+                    <div class="timeline-option">
+                      <input type="radio" id="timeline-urgent" name="timeline" value="urgent" class="timeline-option__input" required>
+                      <label for="timeline-urgent" class="timeline-option__label">
+                        <div class="timeline-option__icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="timeline-option__text">Dringend</div>
+                          <div class="timeline-option__subtext">Innerhalb 2 Wochen</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="timeline-option">
+                      <input type="radio" id="timeline-normal" name="timeline" value="normal" class="timeline-option__input">
+                      <label for="timeline-normal" class="timeline-option__label">
+                        <div class="timeline-option__icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="timeline-option__text">Normal</div>
+                          <div class="timeline-option__subtext">1-2 Monate</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="timeline-option">
+                      <input type="radio" id="timeline-flexible" name="timeline" value="flexible" class="timeline-option__input">
+                      <label for="timeline-flexible" class="timeline-option__label">
+                        <div class="timeline-option__icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="timeline-option__text">Flexibel</div>
+                          <div class="timeline-option__subtext">Noch offen</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="timeline-option">
+                      <input type="radio" id="timeline-research" name="timeline" value="research" class="timeline-option__input">
+                      <label for="timeline-research" class="timeline-option__label">
+                        <div class="timeline-option__icon">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="timeline-option__text">Recherche</div>
+                          <div class="timeline-option__subtext">Infos einholen</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group__label" for="message">
+                    Projektbeschreibung <span class="required">*</span>
+                  </label>
+                  <textarea id="message" name="message" class="form-group__textarea" required placeholder="Beschreiben Sie kurz Ihr Projekt: Was soll umgesetzt werden? Was sind Ihre Ziele? Gibt es besondere Anforderungen?" rows="5"></textarea>
+                  <p class="form-group__error">Bitte beschreiben Sie Ihr Projekt</p>
+                </div>
+              </div>
+
+              <!-- Step 3: Budget -->
+              <div class="form-step" data-step="3">
+                <h3 class="form-step__title">Budget & Abschluss</h3>
+                <p class="form-step__subtitle">Helfen Sie mir, das passende Angebot zu erstellen</p>
+                
+                <div class="form-group">
+                  <label class="form-group__label">
+                    Geschätztes Budget <span class="required">*</span>
+                  </label>
+                  <div class="budget-grid">
+                    <div class="budget-option">
+                      <input type="radio" id="budget-small" name="budget" value="small" class="budget-option__input" required>
+                      <label for="budget-small" class="budget-option__label">
+                        <div class="budget-option__amount">€299 - €1.500</div>
+                        <div class="budget-option__description">Kleine Projekte</div>
+                      </label>
+                    </div>
+                    <div class="budget-option">
+                      <input type="radio" id="budget-medium" name="budget" value="medium" class="budget-option__input">
+                      <label for="budget-medium" class="budget-option__label">
+                        <div class="budget-option__amount">€1.500 - €5.000</div>
+                        <div class="budget-option__description">Mittlere Projekte</div>
+                      </label>
+                    </div>
+                    <div class="budget-option">
+                      <input type="radio" id="budget-large" name="budget" value="large" class="budget-option__input">
+                      <label for="budget-large" class="budget-option__label">
+                        <div class="budget-option__amount">€5.000+</div>
+                        <div class="budget-option__description">Große Projekte</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group__label" for="referral">
+                    Wie haben Sie von mir erfahren?
+                  </label>
+                  <select id="referral" name="referral" class="form-group__select">
+                    <option value="">Bitte wählen...</option>
+                    <option value="google">Google Suche</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="empfehlung">Empfehlung</option>
+                    <option value="social">Social Media</option>
+                    <option value="messe">Messe/Event</option>
+                    <option value="sonstiges">Sonstiges</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="privacy" name="privacy" class="form-checkbox__input" required>
+                    <label for="privacy" class="form-checkbox__label" style="padding: var(--space-4); line-height: 1.5;">
+                      Ich habe die <a href="datenschutz.html" style="color: var(--color-accent); text-decoration: underline;">Datenschutzerklärung</a> gelesen und akzeptiere diese. *
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation -->
+              <div class="form-nav">
+                <button type="button" class="form-nav__prev" id="prevBtn" disabled>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                  </svg>
+                  Zurück
+                </button>
+                <button type="button" class="form-nav__next" id="nextBtn">
+                  Weiter
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <button type="submit" class="form-nav__submit" id="submitBtn" style="display: none;">
+                  Anfrage senden
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess">
+              <div class="form-success__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <h3 class="form-success__title">Vielen Dank für Ihre Anfrage!</h3>
+              <p class="form-success__message">
+                Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen.
+              </p>
+              <div class="form-success__next-steps">
+                <h4>Was passiert als nächstes?</h4>
+                <ul>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9 11 12 14 22 4"/>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                    </svg>
+                    <span>Ich prüfe Ihre Anfrage und bereite ein erstes Feedback vor</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9 11 12 14 22 4"/>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                    </svg>
+                    <span>Persönliches Telefonat zur Klärung der Details</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9 11 12 14 22 4"/>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                    </svg>
+                    <span>Individuelles Angebot innerhalb von 3 Werktagen</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h2 style="margin-bottom: var(--space-6);">Kontaktdaten</h2>
+            
+            <div class="card mb-8">
+              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
+                <div style="color: var(--color-accent);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: var(--space-1);">E-Mail</h4>
+                  <a href="mailto:hello@devmiro.at" style="color: var(--color-accent);">hello@devmiro.at</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-8">
+              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
+                <div style="color: var(--color-accent);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: var(--space-1);">Telefon</h4>
+                  <a href="tel:+436761234567" style="color: var(--color-accent);">+43 676 1234567</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-8">
+              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
+                <div style="color: var(--color-accent);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: var(--space-1);">Standort</h4>
+                  <p style="color: var(--color-text-secondary);">Vorarlberg, Österreich</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-8">
+              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
+                <div style="color: var(--color-accent);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: var(--space-1);">Erreichbarkeit</h4>
+                  <p style="color: var(--color-text-secondary);">Mo - Fr: 9:00 - 18:00 Uhr</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Response Promise -->
+            <div class="card" style="background: linear-gradient(135deg, var(--color-accent-light), var(--color-purple-light)); border: none;">
+              <div style="text-align: center; padding: var(--space-4);">
+                <div style="font-size: 2rem; margin-bottom: var(--space-2);">⚡</div>
+                <h4 style="margin-bottom: var(--space-2);">Schnelle Antwort garantiert</h4>
+                <p style="color: var(--color-text-secondary); font-size: 0.875rem;">
+                  Ich antworte auf jede Anfrage innerhalb von 24 Stunden — meistens viel schneller.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">DevMiro</div>
+          <p class="footer__tagline">
+            Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg und Österreich.
+          </p>
+          <div class="footer__social">
+            <a href="https://linkedin.com/company/devmiro" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://github.com/devorsomething" aria-label="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Leistungen</h4>
+          <ul class="footer__links">
+            <li><a href="services/website-erstellung.html">Website-Erstellung</a></li>
+            <li><a href="services/web-hosting.html">Web Hosting</a></li>
+            <li><a href="services/managed-services.html">Managed Services</a></li>
+            <li><a href="services/cloud-solutions.html">Cloud Solutions</a></li>
+            <li><a href="services/seo-marketing.html">SEO & Marketing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Weitere Services</h4>
+          <ul class="footer__links">
+            <li><a href="services/it-sicherheit.html">IT-Sicherheit</a></li>
+            <li><a href="services/softwareentwicklung.html">Softwareentwicklung</a></li>
+            <li><a href="services/it-beratung.html">IT-Beratung</a></li>
+            <li><a href="services/email-kommunikation.html">E-Mail & Kommunikation</a></li>
+            <li><a href="services/wartung-support.html">Wartung & Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Kontakt</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li>
+            <li><a href="tel:+436761234567">+43 676 1234567</a></li>
+            <li>Vorarlberg, Österreich</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>© 2024 DevMiro — Timo Miro Gavanelli. Alle Rechte vorbehalten.</p>
+        <div class="footer__bottom-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="contact.html" class="btn btn--primary">
+      Jetzt Beratung anfragen
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/436761234567?text=Hallo,%20ich%20interessiere%20mich%20für%20Ihre%20IT-Dienstleistungen." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+    <span class="whatsapp-btn__tooltip">Chatten Sie mit uns!</span>
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+    <div class="cookie-consent__inner">
+      <div class="cookie-consent__text">
+        <h4 id="cookie-title">🍪 Wir verwenden Cookies</h4>
+        <p id="cookie-desc">Diese Website verwendet Cookies, um Ihnen ein optimales Erlebnis zu bieten. <a href="datenschutz.html">Mehr erfahren</a></p>
+      </div>
+      <div class="cookie-consent__actions">
+        <button class="cookie-consent__settings">Einstellungen</button>
+        <button class="cookie-consent__accept">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/multi-step-form.js"></script>
+</body>
+</html>

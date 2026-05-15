@@ -1,0 +1,208 @@
+/* Interactive Heatmap Styles */
+
+/* ============ Heatmap ============ */
+.heatmap-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.5;
+}
+
+.heatmap-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heatmap__controls {
+  position: fixed;
+  top: 120px;
+  right: 24px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 200px;
+}
+
+.heatmap__title {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heatmap__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  cursor: pointer;
+}
+
+.heatmap__option-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.heatmap__color-box {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.heatmap__toggle {
+  width: 36px;
+  height: 20px;
+  background: var(--color-border);
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.heatmap__toggle.active {
+  background: var(--color-primary);
+}
+
+.heatmap__toggle::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.heatmap__toggle.active::after {
+  transform: translateX(16px);
+}
+
+/* Click Heatmap Data Display */
+.heatmap__data-panel {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 280px;
+}
+
+.heatmap__data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heatmap__data-row:last-child {
+  border-bottom: none;
+}
+
+.heatmap__data-label {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.heatmap__data-value {
+  font-weight: 600;
+}
+
+/* Eye Tracking Simulation */
+.eye-tracking {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9997;
+}
+
+/* Scroll Depth Marker */
+.scroll-depth {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-left: none;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--space-3);
+  z-index: 9999;
+}
+
+.scroll-depth__bar {
+  width: 4px;
+  height: 200px;
+  background: var(--color-border);
+  border-radius: 2px;
+  position: relative;
+}
+
+.scroll-depth__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: height 0.1s ease;
+}
+
+.scroll-depth__label {
+  position: absolute;
+  left: 12px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Zone Analysis */
+.zone-analysis {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  z-index: 9999;
+}
+
+.zone-analysis__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+}
+
+.zone-analysis__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.zone-analysis__dot.hot { background: #EF4444; }
+.zone-analysis__dot.warm { background: #F59E0B; }
+.zone-analysis__dot.cool { background: #3B82F6; }

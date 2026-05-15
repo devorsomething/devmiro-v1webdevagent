@@ -1,0 +1,186 @@
+/* Multi-currency & Geo-targeting Styles */
+
+/* ============ Multi-currency ============ */
+.currency-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.currency-selector__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.currency-selector__btn:hover {
+  border-color: var(--color-primary);
+}
+
+.currency-selector__dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--space-2);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+.currency-selector__dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.currency-selector__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.currency-selector__option:hover {
+  background: var(--color-background-secondary);
+}
+
+.currency-selector__option.active {
+  background: rgba(59, 130, 246, 0.05);
+  color: var(--color-primary);
+}
+
+.currency-selector__code {
+  font-weight: 600;
+}
+
+.currency-selector__symbol {
+  color: var(--color-text-muted);
+}
+
+/* Geo-targeting Banner */
+.geo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  padding: var(--space-3);
+  text-align: center;
+  z-index: 9998;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.geo-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.geo-banner__text {
+  font-size: 0.875rem;
+}
+
+.geo-banner__close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.geo-banner__close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Regional Pricing */
+.regional-price {
+  position: relative;
+}
+
+.regional-price__original {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.regional-price__discount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #EF4444;
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+/* Locale Switcher */
+.locale-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.locale-switcher__btn {
+  padding: var(--space-1) var(--space-2);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.locale-switcher__btn:hover {
+  background: var(--color-background-secondary);
+}
+
+.locale-switcher__btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Timezone Display */
+.timezone-display {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.timezone-display__icon {
+  font-size: 0.875rem;
+}

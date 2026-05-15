@@ -1,0 +1,219 @@
+/* Smart Content Recommendations Styles */
+
+/* ============ Recommendations ============ */
+
+/* Recommendation Carousel */
+.recommendation-section {
+  padding: var(--space-16) 0;
+  background: var(--color-background-secondary);
+}
+
+.recommendation-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendation-track {
+  display: flex;
+  gap: var(--space-4);
+  transition: transform 0.5s ease;
+}
+
+.recommendation-card {
+  flex: 0 0 calc(33.333% - var(--space-4));
+  background: var(--color-background);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recommendation-card__content {
+  padding: var(--space-4);
+}
+
+.recommendation-card__category {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.recommendation-card__title {
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  font-size: 1.125rem;
+}
+
+.recommendation-card__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.recommendation-card__score {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-primary);
+}
+
+/* Personalized Content Grid */
+.personalized-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.personalized-item {
+  padding: var(--space-4);
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.personalized-item:hover {
+  background: var(--color-background-secondary);
+}
+
+.personalized-item__rank {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.3;
+}
+
+/* Related Products */
+.related-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.related-product-tag {
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.related-product-tag:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Trending Now */
+.trending-section {
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-8);
+}
+
+.trending-list {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+}
+
+.trending-item {
+  flex: 0 0 200px;
+  padding: var(--space-3);
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.trending-item__rank {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.trending-item__title {
+  font-size: 0.875rem;
+  margin: var(--space-2) 0;
+}
+
+.trending-item__views {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Content Affinity */
+.affinity-section {
+  padding: var(--space-8) 0;
+}
+
+.affinity-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.affinity-bar__label {
+  min-width: 100px;
+  font-size: 0.875rem;
+}
+
+.affinity-bar__track {
+  flex: 1;
+  height: 8px;
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.affinity-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  transition: width 0.5s ease;
+}
+
+.affinity-bar__value {
+  min-width: 50px;
+  text-align: right;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .recommendation-card {
+    flex: 0 0 calc(50% - var(--space-4));
+  }
+  
+  .personalized-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .recommendation-card {
+    flex: 0 0 100%;
+  }
+  
+  .personalized-grid {
+    grid-template-columns: 1fr;
+  }
+}

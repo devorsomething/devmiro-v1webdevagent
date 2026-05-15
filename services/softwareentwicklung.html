@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maßgeschneiderte Softwareentwicklung. Web-Apps, API-Entwicklung, Mobile Apps. Ab €89/Stunde.">
+  <title>Softwareentwicklung | DevMiro</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../index.html" class="nav__logo">DevMiro</a>
+        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+        <ul class="nav__links">
+          <li><a href="../index.html" class="nav__link">Start</a></li>
+          <li><a href="../services.html" class="nav__link nav__link--active">Leistungen</a></li>
+          <li><a href="../pricing.html" class="nav__link">Preise</a></li>
+          <li><a href="../about.html" class="nav__link">Über Mich</a></li>
+          <li><a href="../contact.html" class="nav__link">Kontakt</a></li>
+        </ul>
+        <a href="../contact.html" class="nav__cta">Kostenlose Beratung</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
+    <div class="container">
+      <div class="hero__badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+        </svg>
+        Softwareentwicklung
+      </div>
+      <h1 class="hero__title">Software, die funktioniert — genau wie Sie es brauchen</h1>
+      <p class="hero__subtitle">
+        Maßgeschneiderte Lösungen, die Ihre Prozesse verbessern und Ihr Business voranbringen. 
+        Web-Apps, APIs, Integrationen — alles aus einer Hand.
+      </p>
+      <div class="hero__actions">
+        <a href="../contact.html" class="btn btn--primary btn--large">Projekt besprechen</a>
+        <a href="#technologies" class="btn btn--outline btn--large">Technologien</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Leistungen
+        </div>
+        <h2 class="section-header__title">Was ich für Sie entwickle</h2>
+      </header>
+      
+      <div class="grid grid--3">
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="card__title">Web-Anwendungen</h3>
+          <p class="card__text">Moderne Web-Apps mit React, Next.js oder plain HTML/CSS/JS. Performant, responsive, nutzerfreundlich.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="card__title">API-Entwicklung</h3>
+          <p class="card__text">RESTful APIs und GraphQL für Ihre Anwendungen. Dokumentiert, getestet, wartbar.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 class="card__title">Systemintegration</h3>
+          <p class="card__text">Verbinden Sie Ihre Systeme und Automatisieren Sie Prozesse. Zapier, Make, n8n, API-Integrationen.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3 class="card__title">Cloud-Entwicklung</h3>
+          <p class="card__text">Serverless Functions, Cloud Functions, Lambda. Skalierbar, kosteneffizient, modern.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="card__title">Testing & QA</h3>
+          <p class="card__text">Automatisierte Tests, Code-Reviews, Qualitätssicherung. Sauberer Code, der funktioniert.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="card__title">Legacy-Modernisierung</h3>
+          <p class="card__text">Alte Systeme erneuern, Migrationen, Refactoring. Geben Sie Ihrer Software neues Leben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="technologies">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          Technologien
+        </div>
+        <h2 class="section-header__title">Moderne Tools, beste Ergebnisse</h2>
+      </header>
+      
+      <div class="grid grid--4">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">⚛️</div>
+          <h4>React / Next.js</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">📜</div>
+          <h4>JavaScript / TypeScript</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🐍</div>
+          <h4>Python / FastAPI</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">⚡</div>
+          <h4>Node.js / Express</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🗄️</div>
+          <h4>PostgreSQL / MongoDB</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🔗</div>
+          <h4>n8n / Make / Zapier</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">☁️</div>
+          <h4>AWS / Google Cloud</h4>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🔒</div>
+          <h4>Auth / Security</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta__title">Haben Sie ein Entwicklungsprojekt?</h2>
+      <p class="cta__subtitle">Kostenlose Erstberatung — ich schaue mir an, was Sie brauchen.</p>
+      <div class="cta__actions">
+        <a href="../contact.html" class="btn btn--primary btn--large">Projekt besprechen</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand"><div class="footer__logo">DevMiro</div><p class="footer__tagline">IT-Dienstleistungen für Vorarlberg.</p></div>
+        <div class="footer__column"><h4>Leistungen</h4><ul class="footer__links"><li><a href="website-erstellung.html">Website-Erstellung</a></li><li><a href="web-hosting.html">Web Hosting</a></li><li><a href="managed-services.html">Managed Services</a></li><li><a href="cloud-solutions.html">Cloud Solutions</a></li></ul></div>
+        <div class="footer__column"><h4>Weitere</h4><ul class="footer__links"><li><a href="it-sicherheit.html">IT-Sicherheit</a></li><li><a href="softwareentwicklung.html">Softwareentwicklung</a></li><li><a href="it-beratung.html">IT-Beratung</a></li></ul></div>
+        <div class="footer__column"><h4>Kontakt</h4><ul class="footer__links"><li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li><li><a href="tel:+436761234567">+43 676 1234567</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><p>© 2024 DevMiro</p><div class="footer__bottom-links"><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

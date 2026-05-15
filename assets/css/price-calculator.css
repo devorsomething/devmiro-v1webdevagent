@@ -1,0 +1,381 @@
+/* Price Calculator Styles */
+
+/* ============ Calculator Container ============ */
+.price-calculator {
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin: var(--space-8) 0;
+  border: 1px solid var(--color-border);
+}
+
+.price-calculator__header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.price-calculator__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.price-calculator__subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+/* ============ Calculator Form ============ */
+.calculator-form {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* ============ Calculator Section ============ */
+.calculator-section {
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.calculator-section__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.calculator-section__title svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent);
+}
+
+/* ============ Slider Group ============ */
+.slider-group {
+  margin-bottom: var(--space-4);
+}
+
+.slider-group:last-child {
+  margin-bottom: 0;
+}
+
+.slider-group__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.slider-group__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.slider-group__value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+/* ============ Range Slider ============ */
+.range-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-border);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.6);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+.range-slider:focus {
+  outline: none;
+}
+
+.range-slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2), 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+/* ============ Add-ons Grid ============ */
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+
+.addon-checkbox {
+  position: relative;
+}
+
+.addon-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.addon-checkbox__label {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.addon-checkbox__label:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.addon-checkbox input:checked + .addon-checkbox__label {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.addon-checkbox__check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  margin-right: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.addon-checkbox input:checked + .addon-checkbox__label .addon-checkbox__check {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.addon-checkbox input:checked + .addon-checkbox__label .addon-checkbox__check svg {
+  opacity: 1;
+}
+
+.addon-checkbox__check svg {
+  width: 14px;
+  height: 14px;
+  stroke: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.addon-checkbox__info {
+  flex: 1;
+}
+
+.addon-checkbox__name {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.addon-checkbox__price {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+/* ============ Total Price Display ============ */
+.calculator-total {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-purple) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator-total::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.calculator-total__label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  margin-bottom: var(--space-2);
+  position: relative;
+}
+
+.calculator-total__price {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  position: relative;
+}
+
+.calculator-total__price span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.calculator-total__note {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  position: relative;
+}
+
+/* ============ Breakdown ============ */
+.calculator-breakdown {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.calculator-breakdown__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--color-background);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.calculator-breakdown__label {
+  color: var(--color-text-secondary);
+}
+
+.calculator-breakdown__value {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.calculator-breakdown__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  background: var(--color-accent-light);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+}
+
+.calculator-breakdown__total .calculator-breakdown__label {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.calculator-breakdown__total .calculator-breakdown__value {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ============ CTA Button ============ */
+.calculator-cta {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.calculator-cta .btn {
+  min-width: 200px;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  .price-calculator {
+    padding: var(--space-6);
+  }
+  
+  .calculator-total__price {
+    font-size: 2.5rem;
+  }
+  
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator-cta {
+    flex-direction: column;
+  }
+  
+  .calculator-cta .btn {
+    width: 100%;
+  }
+}
+
+/* ============ Dark Mode ============ */
+[data-theme="dark"] .calculator-section {
+  background: var(--color-background-secondary);
+}
+
+[data-theme="dark"] .addons-grid {
+  background: var(--color-background);
+}
+
+[data-theme="dark"] .calculator-breakdown__item {
+  background: var(--color-background);
+}
+
+[data-theme="dark"] .range-slider {
+  background: var(--color-border);
+}
+
+[data-theme="dark"] .addon-checkbox__label {
+  background: var(--color-background);
+}

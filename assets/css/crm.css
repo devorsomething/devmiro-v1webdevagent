@@ -1,0 +1,275 @@
+/* CRM / HubSpot Integration Styles */
+
+/* ============ CRM Section ============ */
+.crm-section {
+  padding: var(--space-16) 0;
+}
+
+.crm__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.crm__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.crm__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.crm__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Lead Form */
+.lead-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-8);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.lead-form__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  text-align: center;
+}
+
+.lead-form__subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.lead-form__group {
+  margin-bottom: var(--space-4);
+}
+
+.lead-form__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.lead-form__input,
+.lead-form__select,
+.lead-form__textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead-form__input:focus,
+.lead-form__select:focus,
+.lead-form__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.lead-form__input.error,
+.lead-form__select.error,
+.lead-form__textarea.error {
+  border-color: #EF4444;
+}
+
+.lead-form__error {
+  font-size: 0.75rem;
+  color: #EF4444;
+  margin-top: var(--space-1);
+}
+
+.lead-form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.lead-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.lead-form__submit {
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lead-form__submit:hover {
+  background: #2563EB;
+  transform: translateY(-2px);
+}
+
+.lead-form__submit:disabled {
+  background: var(--color-text-muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success State */
+.lead-form__success {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.lead-form__success-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+}
+
+.lead-form__success-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.lead-form__success-message {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* CRM Benefits */
+.crm-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-12) 0;
+}
+
+.crm-benefit {
+  padding: var(--space-6);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.crm-benefit:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.crm-benefit__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  font-size: 1.5rem;
+}
+
+.crm-benefit__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.crm-benefit__description {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Lead Scoring */
+.lead-scoring {
+  margin-top: var(--space-12);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.lead-scoring__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.lead-scoring__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-4);
+}
+
+.lead-scoring__item {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+}
+
+.lead-scoring__value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.lead-scoring__label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Privacy Note */
+.lead-form__privacy {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+.lead-form__privacy a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lead-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-form {
+    padding: var(--space-6);
+  }
+}

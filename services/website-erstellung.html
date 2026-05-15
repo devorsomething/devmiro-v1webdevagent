@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle Website-Erstellung für Unternehmen. Individuelle Designs, responsive Entwicklung, SEO-optimiert. Ab €299.">
+  <meta name="keywords" content="Website erstellen, Webdesign, Homepage erstellen, responsive Webdesign, SEO">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  
+  <title>Website-Erstellung | DevMiro - Professionelle Webentwicklung</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../index.html" class="nav__logo">DevMiro</a>
+        <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" role="menubar">
+          <li><a href="../index.html" class="nav__link">Start</a></li>
+          <li><a href="../services.html" class="nav__link nav__link--active" role="menuitem">Leistungen</a></li>
+          <li><a href="../pricing.html" class="nav__link">Preise</a></li>
+          <li><a href="../about.html" class="nav__link">Über Mich</a></li>
+          <li><a href="../contact.html" class="nav__link">Kontakt</a></li>
+        </ul>
+        <a href="../contact.html" class="nav__cta">
+          Kostenlose Beratung
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
+    <div class="container">
+      <div class="hero__badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <line x1="3" y1="9" x2="21" y2="9"/>
+          <circle cx="8" cy="15" r="2"/>
+          <path d="M21 15l-5-5"/>
+        </svg>
+        Website-Erstellung
+      </div>
+      <h1 class="hero__title">Individuelle Websites, die Results liefern</h1>
+      <p class="hero__subtitle">
+        Ich erstelle maßgeschneiderte Websites, die nicht nur gut aussehen, sondern auch 
+        Besucher in Kunden verwandeln. Modern, performant und SEO-optimiert.
+      </p>
+      <div class="hero__actions">
+        <a href="../contact.html" class="btn btn--primary btn--large">
+          Kostenloses Erstgespräch
+        </a>
+        <a href="#pricing" class="btn btn--outline btn--large">Preise ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Leistungen
+        </div>
+        <h2 class="section-header__title">Was Sie erwarten dürfen</h2>
+        <p class="section-header__subtitle">
+          Eine professionelle Website ist mehr als nur Design — sie ist Ihre digitale Visitenkarte.
+        </p>
+      </header>
+      
+      <div class="grid grid--2" style="gap: var(--space-12);">
+        <div>
+          <h3 style="margin-bottom: var(--space-6);">Design & UX</h3>
+          <ul class="feature-list">
+            <li>
+              <div class="feature-list__icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Responsive Design</strong>
+                <p class="text-muted">Perfekt auf Desktop, Tablet und Mobile optimiert. Ihre Website sieht überall großartig aus.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feature-list__icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>UI/UX optimiert</strong>
+                <p class="text-muted">Durchdachte Benutzerführung für maximale Conversion. Jeder Klick führt zum Ziel.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feature-list__icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Brand-konform</strong>
+                <p class="text-muted">Farben, Schriften und Stil Ihrer Marke werden authentisch umgesetzt.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom: var(--space-6);">Technik & Performance</h3>
+          <ul class="feature-list">
+            <li>
+              <div class="feature-list__icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>SEO-optimiert</strong>
+                <p class="text-muted">Von technischem SEO bis zu strukturierte Daten — Ihre Website wird gefunden.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feature-list__icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Blitzschnelle Ladezeiten</strong>
+                <p class="text-muted">Performance-optimiert für beste Google-Rankings und Nutzererfahrung.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feature-list__icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Security inklusive</strong>
+                <p class="text-muted">SSL-Zertifikat, Spam-Schutz und regelmäßige Sicherheitsupdates.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--alt">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          So arbeite ich
+        </div>
+        <h2 class="section-header__title">Mein Prozess</h2>
+        <p class="section-header__subtitle">Transparent, strukturiert und immer nah am Ziel.</p>
+      </header>
+      
+      <div class="grid grid--4">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-4);">01</div>
+          <h3>Analyse & Konzept</h3>
+          <p class="text-muted">Wir besprechen Ihre Ziele, Zielgruppe und Wettbewerb. Danach erstelle ich ein Konzept.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-4);">02</div>
+          <h3>Design & Freigabe</h3>
+          <p class="text-muted">Entwurf des Designs zur Freigabe. Zwei Revisionen inklusive — Sie werden zufrieden sein.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-4);">03</div>
+          <h3>Entwicklung</h3>
+          <p class="text-muted">Saubere, performante Umsetzung mit modernsten Standards. Stets transparent.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-4);">04</div>
+          <h3>Launch & Support</h3>
+          <p class="text-muted">Go-Live, Schulung und optionaler laufender Support. Ich lasse Sie nicht allein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          Preise
+        </div>
+        <h2 class="section-header__title">Transparente Preisgestaltung</h2>
+        <p class="section-header__subtitle">Wählen Sie das Paket, das zu Ihrem Budget und Ihren Zielen passt.</p>
+      </header>
+      
+      <div class="grid grid--3">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <div class="badge badge--accent">Starter</div>
+            <h3 class="pricing-card__name" style="margin-top: var(--space-4);">Landing Page</h3>
+            <p class="pricing-card__description">Perfekt für den schnellen Start</p>
+            <div class="pricing-card__price">
+              <div class="pricing-card__amount">€299</div>
+              <span>einmalig</span>
+            </div>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              1 Seite (Hero + Features + CTA)
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Responsive Design
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Kontaktformular
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              SSL-Zertifikat
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Basis SEO-Optimierung
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              2 Revisionen
+            </li>
+          </ul>
+          <div class="pricing-card__footer">
+            <a href="../contact.html" class="btn btn--outline w-full">Jetzt anfragen</a>
+          </div>
+        </div>
+        
+        <!-- Professional -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__header">
+            <div class="badge badge--accent">Professional</div>
+            <h3 class="pricing-card__name" style="margin-top: var(--space-4);">Business Website</h3>
+            <p class="pricing-card__description">Der Standard für KMUs</p>
+            <div class="pricing-card__price">
+              <div class="pricing-card__amount">€799</div>
+              <span>einmalig</span>
+            </div>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              bis zu 5 Seiten
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Responsive Design
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Kontaktformulare
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              SSL + Google Analytics
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Vollständige SEO-Optimierung
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Blog/News-Sektion
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              4 Revisionen
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              3 Monate Support inklusive
+            </li>
+          </ul>
+          <div class="pricing-card__footer">
+            <a href="../contact.html" class="btn btn--primary w-full">Jetzt anfragen</a>
+          </div>
+        </div>
+        
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <div class="badge badge--accent">Enterprise</div>
+            <h3 class="pricing-card__name" style="margin-top: var(--space-4);">Premium Website</h3>
+            <p class="pricing-card__description">Für höchste Ansprüche</p>
+            <div class="pricing-card__price">
+              <div class="pricing-card__amount">€1.499</div>
+              <span>einmalig</span>
+            </div>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Unbegrenzte Seiten
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Premium Design + Animationen
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              E-Commerce Integration
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Custom CRM/ERP Integration
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Fortschrittliche SEO-Strategie
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Mehrsprachigkeit
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Unbegrenzte Revisionen
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              12 Monate Priority-Support
+            </li>
+          </ul>
+          <div class="pricing-card__footer">
+            <a href="../contact.html" class="btn btn--outline w-full">Individuelles Angebot</a>
+          </div>
+        </div>
+      </div>
+      
+      <p style="text-align: center; margin-top: var(--space-8);" class="text-muted">
+        Exakte Preise hängen von Ihren spezifischen Anforderungen ab. 
+        <a href="../contact.html">Kostenlose Erstberatung</a> — ich erstelle ein individuelles Angebot.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-header__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          FAQ
+        </div>
+        <h2 class="section-header__title">Häufig gestellte Fragen</h2>
+        <p class="section-header__subtitle">Die wichtigsten Antworten auf einen Blick.</p>
+      </header>
+
+      <div class="grid grid--2" style="max-width: 900px; margin: 0 auto;">
+        <div class="faq__item">
+          <button class="faq__question">
+            Wie lange dauert die Erstellung einer Website?
+            <span class="faq__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer">
+            <p>Eine Landing Page ist in 1-2 Wochen fertig. Eine vollständige Business-Website mit 5 Seiten dauert 3-4 Wochen. Komplexere Projekte mit E-Commerce oder Custom-Funktionen können 6-8 Wochen in Anspruch nehmen.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Was ist im Preis inbegriffen?
+            <span class="faq__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer">
+            <p>Alle Preise beinhalten: Konzept & Wireframes, professionelles Design, responsive Umsetzung, SSL-Zertifikat, grundlegende SEO-Optimierung und eine bestimmte Anzahl an Revisionen (je nach Paket).</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Kann ich meine Website später selbst bearbeiten?
+            <span class="faq__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer">
+            <p>Ja! Ich biete ein einfach zu bedienendes CMS an, mit dem Sie Ihre Website selbst aktualisieren können. Optional erhalten Sie auch eine Schulung, um alle Funktionen optimal zu nutzen.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Bieten Sie auch Hosting an?
+            <span class="faq__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer">
+            <p>Ja, ich biete professionelles Web Hosting ab €19/Monat an. Dies beinhaltet SSD-Speicher, SSL-Zertifikate, tägliche Backups und 99,9% Verfügbarkeit. Gerne übernehme ich auch die laufende Betreuung.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Wie funktioniert die Bezahlung?
+            <span class="faq__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer">
+            <p>Die Zahlung erfolgt in zwei Raten: 50% bei Auftragsbestätigung, 50% nach Fertigstellung und vor der Live-Schaltung. Für kleinere Projekte ist auch eine Einzelzahlung möglich.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Was passiert nach der Fertigstellung?
+            <span class="faq__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer">
+            <p>Nach der Fertigstellung erhalten Sie 3-12 Monate kostenlosen Support (je nach Paket). Danach können Sie optional einen Wartungsvertrag abschließen, der regelmäßige Updates, Hosting und Support beinhaltet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta__title">Bereit für Ihre neue Website?</h2>
+      <p class="cta__subtitle">
+        Lassen Sie uns über Ihr Projekt sprechen. Kostenlos und unverbindlich.
+      </p>
+      <div class="cta__actions">
+        <a href="../contact.html" class="btn btn--primary btn--large">
+          Kostenlose Beratung buchen
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">DevMiro</div>
+          <p class="footer__tagline">Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg.</p>
+          <div class="footer__social">
+            <a href="https://linkedin.com/company/devmiro" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/devorsomething" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Leistungen</h4>
+          <ul class="footer__links">
+            <li><a href="website-erstellung.html">Website-Erstellung</a></li>
+            <li><a href="web-hosting.html">Web Hosting</a></li>
+            <li><a href="managed-services.html">Managed Services</a></li>
+            <li><a href="cloud-solutions.html">Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Weitere Services</h4>
+          <ul class="footer__links">
+            <li><a href="it-sicherheit.html">IT-Sicherheit</a></li>
+            <li><a href="softwareentwicklung.html">Softwareentwicklung</a></li>
+            <li><a href="it-beratung.html">IT-Beratung</a></li>
+            <li><a href="wartung-support.html">Wartung & Support</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Kontakt</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li>
+            <li><a href="tel:+436761234567">+43 676 1234567</a></li>
+            <li>Vorarlberg, Österreich</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 DevMiro — Timo Miro Gavanelli. Alle Rechte vorbehalten.</p>
+        <div class="footer__bottom-links">
+          <a href="../impressum.html">Impressum</a>
+          <a href="../datenschutz.html">Datenschutz</a>
+          <a href="../agb.html">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

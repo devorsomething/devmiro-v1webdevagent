@@ -1,0 +1,275 @@
+/* Before/After Image Slider Styles */
+
+/* ============ Before/After Slider ============ */
+.before-after {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  cursor: ew-resize;
+  touch-action: none;
+  user-select: none;
+}
+
+.before-after__container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+/* Images */
+.before-after__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before-after__image--before {
+  z-index: 2;
+  clip-path: inset(0 50% 0 0);
+}
+
+.before-after__image--after {
+  z-index: 1;
+}
+
+/* Slider Handle */
+.before-after__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  z-index: 10;
+  background: #FFFFFF;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+}
+
+.before-after__handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.before-after:hover .before-after__handle::before {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.before-after__handle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.before-after__handle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.before-after__handle-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+}
+
+/* Handle Arrows */
+.before-after__arrows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  display: flex;
+  gap: 4px;
+}
+
+.before-after__arrow {
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+}
+
+.before-after__arrow--left {
+  transform: rotate(180deg);
+}
+
+/* Labels */
+.before-after__label {
+  position: absolute;
+  top: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.before-after:hover .before-after__label {
+  opacity: 1;
+}
+
+.before-after__label--before {
+  left: var(--space-4);
+}
+
+.before-after__label--after {
+  right: var(--space-4);
+}
+
+/* Percentage Display */
+.before-after__percentage {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Caption */
+.before-after__caption {
+  padding: var(--space-4);
+  background: var(--color-background-secondary);
+  text-align: center;
+}
+
+.before-after__caption-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.before-after__caption-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* Full-width variant */
+.before-after--full {
+  max-width: 100%;
+  border-radius: 0;
+}
+
+.before-after--full .before-after__container {
+  aspect-ratio: 21/9;
+}
+
+/* Compact variant */
+.before-after--compact {
+  max-width: 400px;
+}
+
+.before-after--compact .before-after__container {
+  aspect-ratio: 4/3;
+}
+
+/* With Overlay Text */
+.before-after__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.before-after__overlay-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .before-after__container {
+    aspect-ratio: 4/3;
+  }
+
+  .before-after__handle::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .before-after__label {
+    font-size: 0.75rem;
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .before-after__caption {
+    padding: var(--space-3);
+  }
+
+  .before-after__caption-title {
+    font-size: 1rem;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .before-after__caption {
+    background: var(--color-dark-background-secondary, #1E293B);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .before-after__label,
+  .before-after__handle::before {
+    transition: none;
+  }
+}

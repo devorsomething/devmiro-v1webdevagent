@@ -1,0 +1,327 @@
+/* Advanced Conversion Optimization Styles */
+
+/* ============ Conversion Optimization ============ */
+
+/* Conversion Funnel Enhanced */
+.conv-funnel-enhanced {
+  padding: var(--space-8) 0;
+}
+
+.conv-funnel-enhanced__header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.conv-funnel-enhanced__stages {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-2);
+  position: relative;
+}
+
+.conv-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 200px;
+  position: relative;
+}
+
+.conv-stage__connector {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.conv-stage__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-background);
+  border: 3px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+  position: relative;
+  z-index: 1;
+}
+
+.conv-stage__count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.conv-stage__label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.conv-stage__rate {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Smart Popup System */
+.smart-popup {
+  position: fixed;
+  z-index: 10000;
+  display: none;
+}
+
+.smart-popup.active {
+  display: block;
+}
+
+.smart-popup--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.smart-popup--bottom-right {
+  bottom: 24px;
+  right: 24px;
+}
+
+.smart-popup--bottom-center {
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.smart-popup__content {
+  background: var(--color-background);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+  animation: popIn 0.4s ease;
+}
+
+.smart-popup__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.smart-popup__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.smart-popup__close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.smart-popup__offer {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.smart-popup__discount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.smart-popup__cta {
+  margin-top: var(--space-4);
+}
+
+/* Urgency Timer */
+.urgency-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-full);
+  color: #EF4444;
+  font-weight: 600;
+}
+
+.urgency-timer__icon {
+  font-size: 1.25rem;
+}
+
+.urgency-timer__time {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.125rem;
+}
+
+/* Social Proof Bar */
+.social-proof-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: white;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  z-index: 9999;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.social-proof-bar.active {
+  transform: translateY(0);
+}
+
+.social-proof-bar__avatars {
+  display: flex;
+}
+
+.social-proof-bar__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -8px;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.social-proof-bar__avatar:first-child {
+  margin-left: 0;
+}
+
+.social-proof-bar__text {
+  font-size: 0.875rem;
+}
+
+/* Scarcity Indicator */
+.scarcity-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-full);
+  color: #F59E0B;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.scarcity-indicator__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #F59E0B;
+  animation: pulse 1s infinite;
+}
+
+/* Exit Intent Overlay */
+.exit-intent-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-intent-overlay.active {
+  display: flex;
+}
+
+.exit-intent-modal {
+  background: var(--color-background);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  max-width: 500px;
+  text-align: center;
+  animation: slideUp 0.4s ease;
+}
+
+.exit-intent-modal__icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+}
+
+/* Progress Stepper */
+.progress-stepper {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin: var(--space-8) 0;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.progress-step__circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.progress-step.active .progress-step__circle,
+.progress-step.completed .progress-step__circle {
+  background: var(--color-primary);
+  color: white;
+}
+
+.progress-step__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.progress-step.active .progress-step__label,
+.progress-step.completed .progress-step__label {
+  color: var(--color-primary);
+}
+
+.progress-step__connector {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+  margin-top: 20px;
+}
+
+.progress-step.completed + .progress-step__connector {
+  background: var(--color-primary);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

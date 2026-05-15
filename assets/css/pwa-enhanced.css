@@ -1,0 +1,281 @@
+/* Progressive Web App Enhanced Styles */
+
+/* ============ PWA Enhanced ============ */
+
+/* Install Prompt */
+.pwa-install-prompt {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  max-width: 400px;
+  animation: slideUp 0.5s ease;
+}
+
+.pwa-install-prompt__icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-3);
+}
+
+.pwa-install-prompt__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
+
+.pwa-install-prompt__desc {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-4);
+}
+
+.pwa-install-prompt__actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* Offline Indicator */
+.offline-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: white;
+  padding: var(--space-3);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 10000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.offline-indicator.active {
+  transform: translateY(0);
+}
+
+/* App Update Banner */
+.app-update-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #22C55E, #16A34A);
+  color: white;
+  padding: var(--space-3);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 10000;
+  display: none;
+}
+
+.app-update-banner.active {
+  display: block;
+}
+
+.app-update-banner__actions {
+  display: inline-flex;
+  gap: var(--space-3);
+  margin-left: var(--space-4);
+}
+
+/* Background Sync Indicator */
+.sync-indicator {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  z-index: 9999;
+}
+
+.sync-indicator__icon {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.sync-indicator.synced .sync-indicator__icon {
+  background: #22C55E;
+  border-color: #22C55E;
+  animation: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Share Sheet */
+.share-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-background);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  padding: var(--space-6);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.share-sheet.active {
+  transform: translateY(0);
+}
+
+.share-sheet__title {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.share-sheet__options {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.share-sheet__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.share-sheet__option-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.share-sheet__option-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Shortcut Badges */
+.shortcut-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.625rem;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+/* App Badges */
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Home Screen Prompt */
+.home-screen-prompt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  max-width: 350px;
+  text-align: center;
+}
+
+.home-screen-prompt__steps {
+  text-align: left;
+  margin: var(--space-4) 0;
+}
+
+.home-screen-prompt__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+}
+
+.home-screen-prompt__step-num {
+  width: 28px;
+  height: 28px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.home-screen-prompt__step-text {
+  font-size: 0.875rem;
+}
+
+/* PWA Quick Actions */
+.pwa-quick-actions {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  z-index: 9998;
+}
+
+.pwa-quick-action {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pwa-quick-action:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.1);
+}

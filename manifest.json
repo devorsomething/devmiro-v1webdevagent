@@ -1,0 +1,112 @@
+{
+  "name": "DevMiro - IT-Dienstleistungen",
+  "short_name": "DevMiro",
+  "description": "Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg. Websites, Hosting, Cloud & mehr.",
+  "start_url": "/index.html?utm_source=pwa",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#3B82F6",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "de-AT",
+  "dir": "ltr",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop Ansicht der DevMiro Website"
+    },
+    {
+      "src": "/assets/screenshots/mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile Ansicht der DevMiro Website"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kontakt aufnehmen",
+      "short_name": "Kontakt",
+      "description": "Öffnet das Kontaktformular",
+      "url": "/contact.html?utm_source=pwa_shortcut",
+      "icons": [{"src": "/assets/icons/shortcut-contact.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Angebot anfordern",
+      "short_name": "Angebot",
+      "description": "Fordern Sie ein unverbindliches Angebot an",
+      "url": "/contact.html?type=offer&utm_source=pwa_shortcut",
+      "icons": [{"src": "/assets/icons/shortcut-offer.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "Unsere IT-Dienstleistungen",
+      "url": "/services.html?utm_source=pwa_shortcut",
+      "icons": [{"src": "/assets/icons/shortcut-services.png", "sizes": "96x96"}]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
+}

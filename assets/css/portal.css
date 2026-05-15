@@ -1,0 +1,330 @@
+/* Customer Portal / Account Area Styles */
+
+/* ============ Customer Portal ============ */
+.portal {
+  padding: var(--space-16) 0;
+}
+
+.portal__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.portal__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-8);
+}
+
+/* Sidebar */
+.portal__sidebar {
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  height: fit-content;
+  position: sticky;
+  top: var(--space-24);
+}
+
+.portal__user {
+  text-align: center;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-6);
+}
+
+.portal__avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-4);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.portal__name {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.portal__email {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.portal__plan {
+  display: inline-block;
+  margin-top: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+/* Navigation */
+.portal__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portal__nav-item {
+  margin-bottom: var(--space-1);
+}
+
+.portal__nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.portal__nav-link:hover {
+  background: var(--color-background-secondary);
+}
+
+.portal__nav-link.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+.portal__nav-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Content Area */
+.portal__content {
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+/* Dashboard Cards */
+.portal__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.portal__stat-card {
+  padding: var(--space-6);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.portal__stat-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  color: var(--color-primary);
+}
+
+.portal__stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.portal__stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.portal__stat-label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Project List */
+.project-list {
+  margin-top: var(--space-8);
+}
+
+.project-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.project-list__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.project-card {
+  padding: var(--space-6);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  transition: all 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.project-card__title {
+  font-weight: 600;
+}
+
+.project-card__status {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.project-card__status--active {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+}
+
+.project-card__status--pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+}
+
+.project-card__status--completed {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+}
+
+.project-card__meta {
+  display: flex;
+  gap: var(--space-6);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.project-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.project-card__meta-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Login/Register Forms */
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: var(--space-8);
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+}
+
+.auth-form__title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+.auth-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.auth-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.auth-form__field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.auth-form__field input {
+  padding: var(--space-3);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+}
+
+.auth-form__field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.auth-form__submit {
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-form__submit:hover {
+  background: #2563EB;
+}
+
+.auth-form__footer {
+  text-align: center;
+  margin-top: var(--space-4);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.auth-form__footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portal__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portal__sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal__stats {
+    grid-template-columns: 1fr;
+  }
+}
