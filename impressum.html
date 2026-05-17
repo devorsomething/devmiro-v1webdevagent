@@ -4,97 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum — DevMiro</title>
-  <meta name="description" content="Impressum und rechtliche Informationen von DevMiro - Timo Miro Gavanelli, IT-Dienstleistungen in Vorarlberg.">
-  
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;510;590&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #0A0A0F;
-      --bg-secondary: #0F1117;
-      --bg-card: #1A1D27;
-      --text-primary: #F9FAFB;
-      --text-secondary: #D1D5DB;
-      --text-muted: #9CA3AF;
-      --accent-primary: #6366F1;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --border-default: rgba(255, 255, 255, 0.1);
+      --bg-marketing: #08090a;
+      --bg-panel: #0f1011;
+      --bg-surface: #191a1b;
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-tertiary: #8a8f98;
+      --accent: #7170ff;
+      --border-subtle: rgba(255, 255, 255, 0.05);
+      --border-default: rgba(255, 255, 255, 0.08);
       --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    html { font-feature-settings: 'cv01', 'ss03'; }
     body {
       font-family: var(--font-sans);
-      background: var(--bg-primary);
+      background: var(--bg-marketing);
       color: var(--text-primary);
-      line-height: 1.7;
+      line-height: 1.6;
       padding: 100px 24px;
     }
-
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
+    .container { max-width: 700px; margin: 0 auto; }
     .back {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 40px;
-      color: var(--text-muted);
       font-size: 0.875rem;
       font-weight: 500;
+      color: var(--text-tertiary);
+      text-decoration: none;
       transition: color 150ms ease;
     }
-
     .back:hover { color: var(--text-primary); }
     .back svg { width: 16px; height: 16px; }
-
     h1 {
       font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-weight: 510;
+      letter-spacing: -1.056px;
       margin-bottom: 40px;
-      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #A855F7 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, #828fff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     h2 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin: 40px 0 16px;
+      font-size: 1rem;
+      font-weight: 590;
+      letter-spacing: -0.13px;
+      color: var(--text-secondary);
+      margin: 32px 0 12px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border-subtle);
     }
-
     p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
+      font-size: 0.9375rem;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
     }
-
+    .card {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+    .card p { margin-bottom: 0; }
     a {
-      color: var(--accent-primary);
+      color: var(--accent);
+      text-decoration: none;
       transition: color 150ms ease;
     }
-
-    a:hover { color: #818CF8; }
-
-    strong { color: var(--text-secondary); font-weight: 600; }
-
-    .card {
-      padding: 24px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      margin: 24px 0;
-    }
+    a:hover { color: #828fff; }
+    strong { color: var(--text-secondary); font-weight: 590; }
   </style>
 </head>
 <body>
@@ -105,30 +93,23 @@
       </svg>
       Zurück zur Startseite
     </a>
-    
     <h1>Impressum</h1>
-    
     <h2>Angaben gemäß § 5 ECG</h2>
     <div class="card">
       <p><strong>Timo Miro Gavanelli</strong></p>
       <p>IT-Dienstleistungen<br>Vorarlberg, Österreich</p>
     </div>
-    
     <h2>Kontakt</h2>
     <div class="card">
       <p>E-Mail: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a></p>
       <p>Telefon: <a href="tel:+436641234567">+43 664 123 4567</a></p>
     </div>
-    
     <h2>UID-Nummer</h2>
     <p>ATU12345678</p>
-    
     <h2>Gewerbebehörde</h2>
     <p>Bezirkshauptstadt Dornbirn</p>
-    
     <h2>Mitgliedschaft</h2>
     <p>Wirtschaftskammer Vorarlberg</p>
-    
     <h2>Online-Streitbeilegung</h2>
     <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr/</a></p>
     <p>Meine E-Mail-Adresse: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a></p>
