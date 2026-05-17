@@ -3,571 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kontaktieren Sie DevMiro. Kostenlose Erstberatung für Ihre IT-Projekte. hello@devmiro.at oder +43 676 1234567">
-  <title>Kontakt | DevMiro</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <title>Kontakt — DevMiro | IT-Lösungen Vorarlberg</title>
+  <meta name="description" content="Kontaktieren Sie DevMiro für IT-Beratung, Workflow-Automatisierung oder Web-Entwicklung in Vorarlberg.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Additional Styles -->
-  <link rel="stylesheet" href="assets/css/dark-mode.css">
-  <link rel="stylesheet" href="assets/css/breadcrumb.css">
-  <link rel="stylesheet" href="assets/css/animations.css">
-  
-  <!-- Main Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-marketing: #08090a;
+      --bg-panel: #0f1011;
+      --bg-surface: #191a1b;
+      --bg-card: rgba(255, 255, 255, 0.02);
+      --bg-card-hover: rgba(255, 255, 255, 0.05);
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-tertiary: #8a8f98;
+      --text-quaternary: #62666d;
+      --brand: #5e6ad2;
+      --accent: #7170ff;
+      --accent-hover: #828fff;
+      --accent-glow: rgba(113, 112, 255, 0.4);
+      --success-bright: #27a644;
+      --border-subtle: rgba(255, 255, 255, 0.05);
+      --border-default: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.12);
+      --border-brand: rgba(113, 112, 255, 0.3);
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; font-feature-settings: 'cv01', 'ss03'; }
+    body { font-family: var(--font-sans); background: var(--bg-marketing); color: var(--text-primary); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .bg-mesh { position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(113, 112, 255, 0.12) 0%, transparent 50%); animation: meshFloat 25s ease-in-out infinite; }
+    @keyframes meshFloat { 0%, 100% { transform: translate(0, 0); } 33% { transform: translate(2%, 1%); } 66% { transform: translate(-1%, 2%); } }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8, 9, 10, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.125rem; font-weight: 510; letter-spacing: -0.24px; }
+    .nav-logo-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); }
+    .nav-logo-icon svg { width: 18px; height: 18px; color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 510; color: var(--text-tertiary); transition: color 150ms ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--brand); color: white; font-size: 0.875rem; font-weight: 510; border-radius: var(--radius-md); transition: all 150ms ease; }
+    .nav-cta:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 0 20px var(--accent-glow); }
+
+    .page-header { padding: 160px 0 80px; text-align: center; position: relative; z-index: 1; }
+    .page-header .section-label { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .page-header h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 510; letter-spacing: -1.584px; margin-bottom: 20px; }
+    .page-header p { font-size: 1.125rem; color: var(--text-tertiary); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .contact-section { padding: 0 0 96px; position: relative; z-index: 1; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    
+    .contact-form { padding: 40px; background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); }
+    .contact-form h2 { font-size: 1.5rem; font-weight: 590; margin-bottom: 8px; }
+    .contact-form > p { font-size: 0.9375rem; color: var(--text-tertiary); margin-bottom: 32px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.875rem; font-weight: 510; margin-bottom: 8px; color: var(--text-secondary); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      transition: border-color 150ms ease;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(113, 112, 255, 0.1);
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-quaternary); }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238a8f98' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 40px; }
+    .form-submit { width: 100%; padding: 14px 28px; background: var(--brand); color: white; font-size: 1rem; font-weight: 510; border: none; border-radius: var(--radius-md); cursor: pointer; transition: all 150ms ease; margin-top: 8px; }
+    .form-submit:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 0 30px var(--accent-glow); }
+    .form-submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-card { padding: 28px; background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); transition: all 200ms ease; }
+    .contact-card:hover { border-color: var(--border-default); transform: translateX(8px); }
+    .contact-card-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .contact-card-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(113, 112, 255, 0.1); border-radius: var(--radius-md); flex-shrink: 0; }
+    .contact-card-icon svg { width: 22px; height: 22px; color: var(--accent); }
+    .contact-card h3 { font-size: 1rem; font-weight: 590; margin-bottom: 4px; }
+    .contact-card > p { font-size: 0.9375rem; color: var(--text-tertiary); margin-bottom: 16px; }
+    .contact-links { display: flex; flex-direction: column; gap: 12px; }
+    .contact-link { display: flex; align-items: center; gap: 12px; font-size: 0.9375rem; color: var(--text-secondary); transition: color 150ms ease; }
+    .contact-link:hover { color: var(--accent); }
+    .contact-link svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .contact-link a { color: inherit; }
+    .contact-link a:hover { color: var(--accent); }
+
+    .availability { padding: 24px; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-xl); }
+    .availability-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .availability-dot { width: 8px; height: 8px; background: var(--success-bright); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .availability-header span { font-size: 0.875rem; font-weight: 590; color: var(--success-bright); }
+    .availability p { font-size: 0.875rem; color: var(--text-tertiary); line-height: 1.6; }
+
+    .footer { padding: 48px 0; border-top: 1px solid var(--border-subtle); position: relative; z-index: 1; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 8px; font-size: 1rem; font-weight: 510; }
+    .footer-brand svg { width: 18px; height: 18px; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 0.875rem; color: var(--text-tertiary); transition: color 150ms ease; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 0.8125rem; color: var(--text-quaternary); }
+
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .page-header { padding: 140px 0 60px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-form { padding: 28px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Skip to Content -->
-  <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+  <div class="bg-mesh"></div>
 
-  <!-- Loading Screen -->
-  <div class="loader" aria-hidden="true">
-    <div class="loader__logo">DevMiro</div>
-    <div class="loader__spinner"></div>
-    <p class="loader__text">Laden...</p>
-  </div>
-
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator" aria-hidden="true"></div>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" aria-label="Nach oben scrollen">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
-  </button>
-
-  <!-- Navigation -->
   <nav class="nav">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="index.html" class="nav__logo">DevMiro</a>
-        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
-        <ul class="nav__links">
-          <li><a href="index.html" class="nav__link">Start</a></li>
-          <li><a href="services.html" class="nav__link">Leistungen</a></li>
-          <li><a href="pricing.html" class="nav__link">Preise</a></li>
-          <li><a href="about.html" class="nav__link">Über Mich</a></li>
-          <li><a href="contact.html" class="nav__link nav__link--active">Kontakt</a></li>
-        </ul>
-        <a href="contact.html" class="nav__cta">Kostenlose Beratung</a>
-      </div>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        DevMiro
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Leistungen</a></li>
+        <li><a href="about.html">Über mich</a></li>
+        <li><a href="contact.html" class="active">Kontakt</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Beratung anfragen</a>
     </div>
   </nav>
 
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
-      <div class="container">
-        <div class="hero__badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          Kontakt
-        </div>
-        <h1 class="hero__title">Sprechen wir über Ihr Projekt</h1>
-        <p class="hero__subtitle">
-          Kostenlose Erstberatung — ich höre zu, stelle Fragen und finde die beste Lösung für Ihre Herausforderung.
-        </p>
-      </div>
-    </section>
+  <header class="page-header">
+    <div class="container">
+      <div class="section-label">Kontakt</div>
+      <h1>Sprechen wir über<br>Ihr Projekt</h1>
+      <p>Schreiben Sie mir oder rufen Sie an. Ich antworte innerhalb von 24 Stunden.</p>
+    </div>
+  </header>
 
-    <!-- Contact Section -->
-    <section class="section">
-      <div class="container">
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-16);">
-          
-          <!-- Multi-Step Form -->
-          <div>
-            <h2 style="margin-bottom: var(--space-6);">Anfrage senden</h2>
-            
-            <div class="form-autosave" id="formAutosave">
-              <svg class="form-autosave__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                <polyline points="9 12 11 14 15 10"/>
-              </svg>
-              <span>Automatisches Speichern aktiv</span>
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h2>Nachricht senden</h2>
+          <p> beschreiben Sie kurz Ihr Anliegen oder Projekt.</p>
+          <form action="mailto:kontakt@devmiro.at" method="POST" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
             </div>
-
-            <form class="multi-step-form" id="contactForm" action="#" method="POST">
-              <!-- Progress -->
-              <div class="form-progress">
-                <div class="form-progress__line" id="progressLine"></div>
-                
-                <div class="form-progress__step active" data-step="1">
-                  <div class="form-progress__number">1</div>
-                  <div class="form-progress__label">Kontakt</div>
-                </div>
-                
-                <div class="form-progress__step" data-step="2">
-                  <div class="form-progress__number">2</div>
-                  <div class="form-progress__label">Projekt</div>
-                </div>
-                
-                <div class="form-progress__step" data-step="3">
-                  <div class="form-progress__number">3</div>
-                  <div class="form-progress__label">Budget</div>
-                </div>
+            <div class="form-group">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" placeholder="max@firma.at" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Firma</label>
+              <input type="text" id="company" name="company" placeholder="Ihre Firma GmbH">
+            </div>
+            <div class="form-group">
+              <label for="service">Interesse an</label>
+              <select id="service" name="service">
+                <option value="">Bitte wählen...</option>
+                <option value="automation">Workflow-Automatisierung (n8n)</option>
+                <option value="ki">KI-Integration</option>
+                <option value="webdev">Web-Entwicklung</option>
+                <option value="security">IT-Security & Backup</option>
+                <option value="cloud">Cloud & Infrastructure</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Nachricht *</label>
+              <textarea id="message" name="message" placeholder="Beschreiben Sie kurz Ihr Anliegen oder Projekt..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Nachricht senden</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div>
+                <h3>E-Mail</h3>
+                <p>Schreiben Sie mir direkt</p>
               </div>
-
-              <!-- Step 1: Contact -->
-              <div class="form-step active" data-step="1">
-                <h3 class="form-step__title">Ihre Kontaktdaten</h3>
-                <p class="form-step__subtitle">Wie kann ich Sie erreichen?</p>
-                
-                <div class="form-group">
-                  <label class="form-group__label" for="name">
-                    Name <span class="required">*</span>
-                  </label>
-                  <input type="text" id="name" name="name" class="form-group__input" required placeholder="Max Mustermann">
-                  <p class="form-group__error">Bitte geben Sie Ihren Namen ein</p>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-group__label" for="email">
-                    E-Mail <span class="required">*</span>
-                  </label>
-                  <input type="email" id="email" name="email" class="form-group__input" required placeholder="ihre@email.at">
-                  <p class="form-group__error">Bitte geben Sie eine gültige E-Mail ein</p>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-group__label" for="phone">
-                    Telefon
-                  </label>
-                  <input type="tel" id="phone" name="phone" class="form-group__input" placeholder="+43 676 1234567">
-                  <p class="form-group__hint">Optional — für Rückrufe</p>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-group__label" for="company">
-                    Unternehmen
-                  </label>
-                  <input type="text" id="company" name="company" class="form-group__input" placeholder="Ihre Firma GmbH">
-                </div>
-              </div>
-
-              <!-- Step 2: Project Details -->
-              <div class="form-step" data-step="2">
-                <h3 class="form-step__title">Ihr Projekt</h3>
-                <p class="form-step__subtitle">Was möchten Sie umsetzen?</p>
-                
-                <div class="form-group">
-                  <label class="form-group__label">
-                    Service-Interesse <span class="required">*</span>
-                  </label>
-                  <div class="form-checkbox-group">
-                    <div class="form-checkbox">
-                      <input type="checkbox" id="service-website" name="service[]" value="website" class="form-checkbox__input">
-                      <label for="service-website" class="form-checkbox__label">Website-Erstellung</label>
-                    </div>
-                    <div class="form-checkbox">
-                      <input type="checkbox" id="service-hosting" name="service[]" value="hosting" class="form-checkbox__input">
-                      <label for="service-hosting" class="form-checkbox__label">Web Hosting</label>
-                    </div>
-                    <div class="form-checkbox">
-                      <input type="checkbox" id="service-managed" name="service[]" value="managed" class="form-checkbox__input">
-                      <label for="service-managed" class="form-checkbox__label">Managed Services</label>
-                    </div>
-                    <div class="form-checkbox">
-                      <input type="checkbox" id="service-cloud" name="service[]" value="cloud" class="form-checkbox__input">
-                      <label for="service-cloud" class="form-checkbox__label">Cloud Solutions</label>
-                    </div>
-                    <div class="form-checkbox">
-                      <input type="checkbox" id="service-seo" name="service[]" value="seo" class="form-checkbox__input">
-                      <label for="service-seo" class="form-checkbox__label">SEO & Marketing</label>
-                    </div>
-                    <div class="form-checkbox">
-                      <input type="checkbox" id="service-security" name="service[]" value="security" class="form-checkbox__input">
-                      <label for="service-security" class="form-checkbox__label">IT-Sicherheit</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-group__label" for="timeline">
-                    Zeitrahmen <span class="required">*</span>
-                  </label>
-                  <div class="timeline-grid">
-                    <div class="timeline-option">
-                      <input type="radio" id="timeline-urgent" name="timeline" value="urgent" class="timeline-option__input" required>
-                      <label for="timeline-urgent" class="timeline-option__label">
-                        <div class="timeline-option__icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                          </svg>
-                        </div>
-                        <div>
-                          <div class="timeline-option__text">Dringend</div>
-                          <div class="timeline-option__subtext">Innerhalb 2 Wochen</div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="timeline-option">
-                      <input type="radio" id="timeline-normal" name="timeline" value="normal" class="timeline-option__input">
-                      <label for="timeline-normal" class="timeline-option__label">
-                        <div class="timeline-option__icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                          </svg>
-                        </div>
-                        <div>
-                          <div class="timeline-option__text">Normal</div>
-                          <div class="timeline-option__subtext">1-2 Monate</div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="timeline-option">
-                      <input type="radio" id="timeline-flexible" name="timeline" value="flexible" class="timeline-option__input">
-                      <label for="timeline-flexible" class="timeline-option__label">
-                        <div class="timeline-option__icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                          </svg>
-                        </div>
-                        <div>
-                          <div class="timeline-option__text">Flexibel</div>
-                          <div class="timeline-option__subtext">Noch offen</div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="timeline-option">
-                      <input type="radio" id="timeline-research" name="timeline" value="research" class="timeline-option__input">
-                      <label for="timeline-research" class="timeline-option__label">
-                        <div class="timeline-option__icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"/>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                          </svg>
-                        </div>
-                        <div>
-                          <div class="timeline-option__text">Recherche</div>
-                          <div class="timeline-option__subtext">Infos einholen</div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-group__label" for="message">
-                    Projektbeschreibung <span class="required">*</span>
-                  </label>
-                  <textarea id="message" name="message" class="form-group__textarea" required placeholder="Beschreiben Sie kurz Ihr Projekt: Was soll umgesetzt werden? Was sind Ihre Ziele? Gibt es besondere Anforderungen?" rows="5"></textarea>
-                  <p class="form-group__error">Bitte beschreiben Sie Ihr Projekt</p>
-                </div>
-              </div>
-
-              <!-- Step 3: Budget -->
-              <div class="form-step" data-step="3">
-                <h3 class="form-step__title">Budget & Abschluss</h3>
-                <p class="form-step__subtitle">Helfen Sie mir, das passende Angebot zu erstellen</p>
-                
-                <div class="form-group">
-                  <label class="form-group__label">
-                    Geschätztes Budget <span class="required">*</span>
-                  </label>
-                  <div class="budget-grid">
-                    <div class="budget-option">
-                      <input type="radio" id="budget-small" name="budget" value="small" class="budget-option__input" required>
-                      <label for="budget-small" class="budget-option__label">
-                        <div class="budget-option__amount">€299 - €1.500</div>
-                        <div class="budget-option__description">Kleine Projekte</div>
-                      </label>
-                    </div>
-                    <div class="budget-option">
-                      <input type="radio" id="budget-medium" name="budget" value="medium" class="budget-option__input">
-                      <label for="budget-medium" class="budget-option__label">
-                        <div class="budget-option__amount">€1.500 - €5.000</div>
-                        <div class="budget-option__description">Mittlere Projekte</div>
-                      </label>
-                    </div>
-                    <div class="budget-option">
-                      <input type="radio" id="budget-large" name="budget" value="large" class="budget-option__input">
-                      <label for="budget-large" class="budget-option__label">
-                        <div class="budget-option__amount">€5.000+</div>
-                        <div class="budget-option__description">Große Projekte</div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-group__label" for="referral">
-                    Wie haben Sie von mir erfahren?
-                  </label>
-                  <select id="referral" name="referral" class="form-group__select">
-                    <option value="">Bitte wählen...</option>
-                    <option value="google">Google Suche</option>
-                    <option value="linkedin">LinkedIn</option>
-                    <option value="empfehlung">Empfehlung</option>
-                    <option value="social">Social Media</option>
-                    <option value="messe">Messe/Event</option>
-                    <option value="sonstiges">Sonstiges</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <div class="form-checkbox">
-                    <input type="checkbox" id="privacy" name="privacy" class="form-checkbox__input" required>
-                    <label for="privacy" class="form-checkbox__label" style="padding: var(--space-4); line-height: 1.5;">
-                      Ich habe die <a href="datenschutz.html" style="color: var(--color-accent); text-decoration: underline;">Datenschutzerklärung</a> gelesen und akzeptiere diese. *
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Navigation -->
-              <div class="form-nav">
-                <button type="button" class="form-nav__prev" id="prevBtn" disabled>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                  </svg>
-                  Zurück
-                </button>
-                <button type="button" class="form-nav__next" id="nextBtn">
-                  Weiter
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </button>
-                <button type="submit" class="form-nav__submit" id="submitBtn" style="display: none;">
-                  Anfrage senden
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="22" y1="2" x2="11" y2="13"/>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                  </svg>
-                </button>
-              </div>
-            </form>
-
-            <!-- Success State -->
-            <div class="form-success" id="formSuccess">
-              <div class="form-success__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-              </div>
-              <h3 class="form-success__title">Vielen Dank für Ihre Anfrage!</h3>
-              <p class="form-success__message">
-                Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen.
-              </p>
-              <div class="form-success__next-steps">
-                <h4>Was passiert als nächstes?</h4>
-                <ul>
-                  <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="9 11 12 14 22 4"/>
-                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                    </svg>
-                    <span>Ich prüfe Ihre Anfrage und bereite ein erstes Feedback vor</span>
-                  </li>
-                  <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="9 11 12 14 22 4"/>
-                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                    </svg>
-                    <span>Persönliches Telefonat zur Klärung der Details</span>
-                  </li>
-                  <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="9 11 12 14 22 4"/>
-                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                    </svg>
-                    <span>Individuelles Angebot innerhalb von 3 Werktagen</span>
-                  </li>
-                </ul>
+            </div>
+            <div class="contact-links">
+              <div class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a>
               </div>
             </div>
           </div>
-
-          <!-- Contact Info -->
-          <div>
-            <h2 style="margin-bottom: var(--space-6);">Kontaktdaten</h2>
-            
-            <div class="card mb-8">
-              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
-                <div style="color: var(--color-accent);">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 style="margin-bottom: var(--space-1);">E-Mail</h4>
-                  <a href="mailto:hello@devmiro.at" style="color: var(--color-accent);">hello@devmiro.at</a>
-                </div>
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div>
+                <h3>Telefon</h3>
+                <p>Für dringende Anliegen</p>
               </div>
             </div>
-            
-            <div class="card mb-8">
-              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
-                <div style="color: var(--color-accent);">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 style="margin-bottom: var(--space-1);">Telefon</h4>
-                  <a href="tel:+436761234567" style="color: var(--color-accent);">+43 676 1234567</a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card mb-8">
-              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
-                <div style="color: var(--color-accent);">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 style="margin-bottom: var(--space-1);">Standort</h4>
-                  <p style="color: var(--color-text-secondary);">Vorarlberg, Österreich</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card mb-8">
-              <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
-                <div style="color: var(--color-accent);">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 style="margin-bottom: var(--space-1);">Erreichbarkeit</h4>
-                  <p style="color: var(--color-text-secondary);">Mo - Fr: 9:00 - 18:00 Uhr</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quick Response Promise -->
-            <div class="card" style="background: linear-gradient(135deg, var(--color-accent-light), var(--color-purple-light)); border: none;">
-              <div style="text-align: center; padding: var(--space-4);">
-                <div style="font-size: 2rem; margin-bottom: var(--space-2);">⚡</div>
-                <h4 style="margin-bottom: var(--space-2);">Schnelle Antwort garantiert</h4>
-                <p style="color: var(--color-text-secondary); font-size: 0.875rem;">
-                  Ich antworte auf jede Anfrage innerhalb von 24 Stunden — meistens viel schneller.
-                </p>
+            <div class="contact-links">
+              <div class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+436641234567">+43 664 123 4567</a>
               </div>
             </div>
           </div>
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div>
+                <h3>Standort</h3>
+                <p>Vorarlberg, Österreich</p>
+              </div>
+            </div>
+            <div class="contact-links">
+              <div class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Verfügbar für Vor-Ort-Termine im Ländle
+              </div>
+            </div>
+          </div>
+          <div class="availability">
+            <div class="availability-header">
+              <div class="availability-dot"></div>
+              <span>Aktuell verfügbar</span>
+            </div>
+            <p>Ich nehme gerade neue Projekte an. Für ein Erstgespräch melde ich mich in der Regel innerhalb von 24 Stunden.</p>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <div class="footer__logo">DevMiro</div>
-          <p class="footer__tagline">
-            Professionelle IT-Dienstleistungen für Unternehmen in Vorarlberg und Österreich.
-          </p>
-          <div class="footer__social">
-            <a href="https://linkedin.com/company/devmiro" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
-            <a href="https://github.com/devorsomething" aria-label="GitHub">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        
-        <div class="footer__column">
-          <h4>Leistungen</h4>
-          <ul class="footer__links">
-            <li><a href="services/website-erstellung.html">Website-Erstellung</a></li>
-            <li><a href="services/web-hosting.html">Web Hosting</a></li>
-            <li><a href="services/managed-services.html">Managed Services</a></li>
-            <li><a href="services/cloud-solutions.html">Cloud Solutions</a></li>
-            <li><a href="services/seo-marketing.html">SEO & Marketing</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer__column">
-          <h4>Weitere Services</h4>
-          <ul class="footer__links">
-            <li><a href="services/it-sicherheit.html">IT-Sicherheit</a></li>
-            <li><a href="services/softwareentwicklung.html">Softwareentwicklung</a></li>
-            <li><a href="services/it-beratung.html">IT-Beratung</a></li>
-            <li><a href="services/email-kommunikation.html">E-Mail & Kommunikation</a></li>
-            <li><a href="services/wartung-support.html">Wartung & Support</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer__column">
-          <h4>Kontakt</h4>
-          <ul class="footer__links">
-            <li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li>
-            <li><a href="tel:+436761234567">+43 676 1234567</a></li>
-            <li>Vorarlberg, Österreich</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer__bottom">
-        <p>© 2024 DevMiro — Timo Miro Gavanelli. Alle Rechte vorbehalten.</p>
-        <div class="footer__bottom-links">
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
-        </div>
+      <div class="footer-inner">
+        <div class="footer-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>DevMiro</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über mich</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="footer-copy">© 2025 DevMiro — IT-Dienstleistungen, Vorarlberg</div>
       </div>
     </div>
   </footer>
-
-  <!-- Mobile Sticky CTA -->
-  <div class="mobile-sticky-cta">
-    <a href="contact.html" class="btn btn--primary">
-      Jetzt Beratung anfragen
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </a>
-  </div>
-
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/436761234567?text=Hallo,%20ich%20interessiere%20mich%20für%20Ihre%20IT-Dienstleistungen." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
-    <span class="whatsapp-btn__tooltip">Chatten Sie mit uns!</span>
-    <svg viewBox="0 0 24 24">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <!-- Cookie Consent -->
-  <div class="cookie-consent" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
-    <div class="cookie-consent__inner">
-      <div class="cookie-consent__text">
-        <h4 id="cookie-title">🍪 Wir verwenden Cookies</h4>
-        <p id="cookie-desc">Diese Website verwendet Cookies, um Ihnen ein optimales Erlebnis zu bieten. <a href="datenschutz.html">Mehr erfahren</a></p>
-      </div>
-      <div class="cookie-consent__actions">
-        <button class="cookie-consent__settings">Einstellungen</button>
-        <button class="cookie-consent__accept">Alle akzeptieren</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/multi-step-form.js"></script>
 </body>
 </html>

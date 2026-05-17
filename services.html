@@ -3,259 +3,1048 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alle IT-Dienstleistungen von DevMiro. Website-Erstellung, Hosting, Managed Services, Cloud, SEO, Security und mehr.">
-  <title>Leistungen | DevMiro - IT-Dienstleistungen für Unternehmen</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <title>Leistungen — DevMiro | IT-Lösungen Vorarlberg</title>
+  <meta name="description" content="Workflow-Automatisierung, KI-Integration, Web-Entwicklung, IT-Security und Cloud-Services für Vorarlberger KMUs. Alle IT-Dienstleistungen aus einer Hand.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-void: #010102;
+      --bg-marketing: #08090a;
+      --bg-panel: #0f1011;
+      --bg-surface: #191a1b;
+      --bg-elevated: #28282c;
+      --bg-card: rgba(255, 255, 255, 0.02);
+      --bg-card-hover: rgba(255, 255, 255, 0.05);
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-tertiary: #8a8f98;
+      --text-quaternary: #62666d;
+      --brand: #5e6ad2;
+      --accent: #7170ff;
+      --accent-hover: #828fff;
+      --accent-glow: rgba(113, 112, 255, 0.4);
+      --success: #10b981;
+      --success-bright: #27a644;
+      --warning: #f59e0b;
+      --border-subtle: rgba(255, 255, 255, 0.05);
+      --border-default: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.12);
+      --border-brand: rgba(113, 112, 255, 0.3);
+      --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --radius-sm: 2px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+      --radius-pill: 9999px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; font-feature-settings: 'cv01', 'ss03'; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-marketing);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Background */
+    .bg-mesh {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(113, 112, 255, 0.12) 0%, transparent 50%);
+      animation: meshFloat 25s ease-in-out infinite;
+    }
+    @keyframes meshFloat {
+      0%, 100% { transform: translate(0, 0); }
+      33% { transform: translate(2%, 1%); }
+      66% { transform: translate(-1%, 2%); }
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(8, 9, 10, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.125rem;
+      font-weight: 510;
+      letter-spacing: -0.24px;
+    }
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+    }
+    .nav-logo-icon svg { width: 18px; height: 18px; color: var(--accent); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 510;
+      color: var(--text-tertiary);
+      transition: color 150ms ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--brand);
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 510;
+      border-radius: var(--radius-md);
+      transition: all 150ms ease;
+    }
+    .nav-cta:hover {
+      background: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 160px 0 80px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .page-header .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 510;
+      letter-spacing: -1.584px;
+      margin-bottom: 20px;
+    }
+    .page-header p {
+      font-size: 1.125rem;
+      color: var(--text-tertiary);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Service Sections */
+    .service-section {
+      padding: 96px 0;
+      border-top: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 1;
+    }
+    .service-section:nth-child(even) {
+      background: var(--bg-panel);
+    }
+    .service-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 64px;
+    }
+    .service-header.reverse {
+      direction: rtl;
+    }
+    .service-header.reverse > * {
+      direction: ltr;
+    }
+    .service-info h2 {
+      font-size: 2rem;
+      font-weight: 510;
+      letter-spacing: -0.704px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .service-info h2 .badge {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      background: rgba(113, 112, 255, 0.1);
+      border: 1px solid var(--border-brand);
+      border-radius: var(--radius-pill);
+      color: var(--accent);
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    .service-info > p {
+      font-size: 1.0625rem;
+      color: var(--text-tertiary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .service-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .service-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+    .service-feature svg { width: 18px; height: 18px; color: var(--success-bright); flex-shrink: 0; margin-top: 2px; }
+    .service-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .process-step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      transition: all 200ms ease;
+    }
+    .process-step:hover {
+      border-color: var(--border-default);
+      transform: translateX(8px);
+    }
+    .process-step-num {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(113, 112, 255, 0.1);
+      border-radius: 50%;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .process-step h4 { font-size: 0.9375rem; font-weight: 590; margin-bottom: 4px; }
+    .process-step p { font-size: 0.8125rem; color: var(--text-tertiary); }
+
+    /* Pricing Cards */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .pricing-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      transition: all 200ms ease;
+    }
+    .pricing-card:hover {
+      border-color: var(--border-default);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: var(--border-brand);
+      background: linear-gradient(135deg, rgba(94, 106, 210, 0.08) 0%, rgba(113, 112, 255, 0.02) 100%);
+    }
+    .pricing-card.featured::before {
+      content: 'Beliebt';
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      background: var(--brand);
+      color: white;
+      border-radius: var(--radius-pill);
+      margin-bottom: 16px;
+    }
+    .pricing-card h3 {
+      font-size: 1.25rem;
+      font-weight: 590;
+      margin-bottom: 8px;
+    }
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: 510;
+      letter-spacing: -0.704px;
+      margin-bottom: 4px;
+    }
+    .pricing-card .price-note {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+    .pricing-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .pricing-card li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    .pricing-card li svg { width: 16px; height: 16px; color: var(--success-bright); flex-shrink: 0; }
+    .pricing-card .btn {
+      display: block;
+      text-align: center;
+      padding: 12px 24px;
+      background: var(--bg-card-hover);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 510;
+      color: var(--text-secondary);
+      transition: all 150ms ease;
+    }
+    .pricing-card .btn:hover {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: white;
+    }
+
+    /* Use Cases */
+    .use-cases {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .use-case {
+      padding: 20px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+    }
+    .use-case h4 {
+      font-size: 1rem;
+      font-weight: 590;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .use-case h4 svg { width: 18px; height: 18px; color: var(--accent); }
+    .use-case p { font-size: 0.875rem; color: var(--text-tertiary); line-height: 1.6; }
+
+    /* CTA */
+    .cta {
+      padding: 96px 0;
+      background: var(--bg-panel);
+      border-top: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 1;
+    }
+    .cta-box {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px;
+      background: linear-gradient(135deg, rgba(94, 106, 210, 0.1) 0%, rgba(113, 112, 255, 0.05) 100%);
+      border: 1px solid var(--border-brand);
+      border-radius: var(--radius-xl);
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 510;
+      letter-spacing: -0.704px;
+      margin-bottom: 16px;
+    }
+    .cta-box > p {
+      font-size: 1.0625rem;
+      color: var(--text-tertiary);
+      margin-bottom: 32px;
+    }
+    .cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--brand);
+      color: white;
+      font-size: 1rem;
+      font-weight: 510;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .btn-primary:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px var(--accent-glow);
+    }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 510;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .btn-ghost:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 1;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 510;
+    }
+    .footer-brand svg { width: 18px; height: 18px; color: var(--accent); }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      transition: color 150ms ease;
+    }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 0.8125rem; color: var(--text-quaternary); }
+
+    /* Focus & Motion */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate { animation: fadeInUp 0.6s ease-out backwards; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .service-header {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .service-header.reverse {
+        direction: ltr;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .page-header { padding: 140px 0 60px; }
+      .service-section { padding: 64px 0; }
+      .use-cases { grid-template-columns: 1fr; }
+      .cta-box { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
 </head>
 <body>
+  <div class="bg-mesh"></div>
+
   <nav class="nav">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="index.html" class="nav__logo">DevMiro</a>
-        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
-        <ul class="nav__links">
-          <li><a href="index.html" class="nav__link">Start</a></li>
-          <li><a href="services.html" class="nav__link nav__link--active">Leistungen</a></li>
-          <li><a href="pricing.html" class="nav__link">Preise</a></li>
-          <li><a href="about.html" class="nav__link">Über Mich</a></li>
-          <li><a href="contact.html" class="nav__link">Kontakt</a></li>
-        </ul>
-        <a href="contact.html" class="nav__cta">Kostenlose Beratung</a>
-      </div>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        DevMiro
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Leistungen</a></li>
+        <li><a href="about.html">Über mich</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Beratung anfragen</a>
     </div>
   </nav>
 
-  <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
+  <header class="page-header">
     <div class="container">
-      <div class="hero__badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
-        </svg>
-        Leistungen
+      <div class="section-label">Leistungen</div>
+      <h1>IT-Lösungen für<br>Vorarlberger Unternehmen</h1>
+      <p>Von Workflow-Automatisierung über KI-Integration bis zur IT-Security — ich biete alles aus einer Hand, was Ihr Unternehmen für die digitale Transformation braucht.</p>
+    </div>
+  </header>
+
+  <!-- Workflow Automation -->
+  <section class="service-section" id="automation">
+    <div class="container">
+      <div class="service-header">
+        <div class="service-info">
+          <h2>
+            Workflow-Automatisierung
+            <span class="badge">n8n Certified</span>
+          </h2>
+          <p>Manuelle, repetitive Aufgaben kosten Zeit und Nerven. Ich baue n8n-Workflows, die Ihre Systeme automatisch verbinden und Geschäftsprozesse im Hintergrund erledigen — fehlerfrei, 24/7.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              CRM- und ERP-Integration — Daten fließen automatisch
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              E-Mail-Automatisierung und Lead-Verarbeitung
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Rechnungsstellung und Buchhaltungs-Automatisierung
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Social Media Posting und Content-Verteilung
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              DSGVO-konforme Open-Source-Lösung (self-hosted)
+            </div>
+          </div>
+        </div>
+        <div class="service-visual">
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step-num">1</div>
+              <div>
+                <h4>Analyse</h4>
+                <p>Ihre aktuellen Prozesse dokumentieren und Automatisierungspotenziale identifizieren</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">2</div>
+              <div>
+                <h4>Konzeption</h4>
+                <p>Workflow-Architektur planen und Systemverbindungen definieren</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">3</div>
+              <div>
+                <h4>Entwicklung</h4>
+                <p>n8n-Workflows bauen, testen und dokumentieren</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">4</div>
+              <div>
+                <h4>Betrieb</h4>
+                <p>Monitoring, Optimierung und laufende Betreuung</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1 class="hero__title">10 IT-Dienstleistungen — alles aus einer Hand</h1>
-      <p class="hero__subtitle">
-        Von der ersten Website bis zur kompletten Cloud-Infrastruktur. 
-        Ich biete ganzheitliche digitale Lösungen für Unternehmen in Vorarlberg.
-      </p>
-      <div class="hero__actions">
-        <a href="contact.html" class="btn btn--primary btn--large">Kostenlose Beratung</a>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="price">ab €1.500</div>
+          <div class="price-note">Einmalzahlung</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1-3 einfache Workflows</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>2-3 System-Integrationen</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Dokumentation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 Monat Support</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+        <div class="pricing-card featured">
+          <h3>Business</h3>
+          <div class="price">ab €3.500</div>
+          <div class="price-note">Einmalzahlung</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>5-10 komplexe Workflows</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>5-8 System-Integrationen</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>KI-Integration inklusive</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>3 Monate Support</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">Individuell</div>
+          <div class="price-note">auf Anfrage</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unbegrenzte Workflows</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Alle Integrationen möglich</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Laufende Betreuung</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>24/7 Monitoring</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- KI Integration -->
+  <section class="service-section" id="ki">
     <div class="container">
-      <header class="section-header">
-        <div class="section-header__badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-          Alle Services
+      <div class="service-header reverse">
+        <div class="service-info">
+          <h2>
+            KI-Integration
+            <span class="badge">AI Expert</span>
+          </h2>
+          <p>Künstliche Intelligenz ist kein Hype — sie löst reale Probleme. Ich integriere LLMs (OpenAI, Claude, lokale Modelle) in Ihre Geschäftsprozesse: von intelligenten Chatbots bis zu automatisierten文本verarbeitung und Wissensdatenbanken.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              KI-Chatbots für Website und Kundenservice
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              RAG-Systeme für firmeninterne Wissensdatenbanken
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Automatisierte Textgenerierung und -zusammenfassung
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Dokumentenklassifikation und -extraktion
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              DSGVO-konforme On-Premise-Optionen verfügbar
+            </div>
+          </div>
         </div>
-        <h2 class="section-header__title">Was ich für Sie tun kann</h2>
-      </header>
-      
-      <div class="grid grid--2">
-        <a href="services/website-erstellung.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-              <line x1="3" y1="9" x2="21" y2="9"/>
-              <circle cx="8" cy="15" r="2"/>
-              <path d="M21 15l-5-5"/>
-            </svg>
+        <div class="service-visual">
+          <div class="use-cases">
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Kundenservice-Chatbot
+              </h4>
+              <p>Beantwortet FAQ rund um die Uhr, integriert in Ihre Website oder WhatsApp. Lernt aus Ihren Dokumenten.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Dokumentenverarbeitung
+              </h4>
+              <p>Rechnungen, Verträge, E-Mails automatisch extrahieren und in Ihr System überführen.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Meeting-Zusammenfassungen
+              </h4>
+              <p>Automatische Transkription und Zusammenfassung von Besprechungen per KI.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Intelligentes E-Mail-Routing
+              </h4>
+              <p>KI klassifiziert und sortiert eingehende E-Mails automatisch an die richtigen Mitarbeiter.</p>
+            </div>
           </div>
-          <h3 class="service-card__title">Website-Erstellung</h3>
-          <p class="service-card__description">Individuelle Websites, die Ihre Marke repräsentieren und Besucher in Kunden verwandeln.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €299 <span>/ Projekt</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Chatbot Basic</h3>
+          <div class="price">ab €2.000</div>
+          <div class="price-note">Einmalzahlung + Hosting</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Website-Chatbot</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Bis 100 FAQ-Paare</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>OpenAI-Integration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 Monat Support</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+        <div class="pricing-card featured">
+          <h3>KI-Workflow</h3>
+          <div class="price">ab €4.500</div>
+          <div class="price-note">Einmalzahlung</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>RAG-Wissensdatenbank</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom GPT/Claude-Integration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Workflow-Automatisierung</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>3 Monate Support</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise KI</h3>
+          <div class="price">Individuell</div>
+          <div class="price-note">auf Anfrage</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>On-Premise LLMs</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom-Fine-Tuning</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Volle DSGVO-Konformität</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Laufende Betreuung</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Development -->
+  <section class="service-section" id="webdev">
+    <div class="container">
+      <div class="service-header">
+        <div class="service-info">
+          <h2>Web-Entwicklung</h2>
+          <p>Moderne, performante Web-Anwendungen, die您的 Unternehmen digitalisieren. Von Landing Pages bis zu komplexen Plattformen — entwickelt mit React, Next.js oder statischem HTML/CSS/JS.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Landing Pages und Marketing-Websites
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Web-Apps mit React/Next.js
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Online-Shops und E-Commerce-Lösungen
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Backend-APIs mit Node.js/TypeScript
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              SEO-optimiert und performant (Core Web Vitals)
+            </div>
           </div>
-        </a>
-        
-        <a href="services/web-hosting.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
+        </div>
+        <div class="service-visual">
+          <div class="use-cases">
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                Firmenwebsite
+              </h4>
+              <p>Professionelle Unternehmenspräsenz mit CMS-Anbindung. Mehrsprachig möglich.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                Dashboard & Portal
+              </h4>
+              <p>Interne Portale, Admin-Dashboards, Kundenbereiche mit Login.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Online-Shop
+              </h4>
+              <p>E-Commerce mit Shopware, WooCommerce oder custom Lösungen.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                Booking-System
+              </h4>
+              <p>Online-Buchung für Dienstleister: Termine, Ressourcen, Zahlung.</p>
+            </div>
           </div>
-          <h3 class="service-card__title">Web Hosting</h3>
-          <p class="service-card__description">Zuverlässiges Hosting mit Top-Performance, SSD-Speicher und deutscher Serverinfrastruktur.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €19 <span>/ Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Landing Page</h3>
+          <div class="price">ab €1.500</div>
+          <div class="price-note">Einmalzahlung</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Responsive Design</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Bis 5 Sections</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Kontaktformular</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>SEO-Grundsetup</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+        <div class="pricing-card featured">
+          <h3>Web-App</h3>
+          <div class="price">ab €4.000</div>
+          <div class="price-note">Einmalzahlung</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Next.js/React Frontend</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Backend-API inklusive</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Benutzerauthentifizierung</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Database-Integration</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Custom Projekt</h3>
+          <div class="price">Individuell</div>
+          <div class="price-note">auf Anfrage</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Komplexe Architektur</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom-Integrationen</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>DevOps-Setup</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Wartungsvertrag möglich</li>
+          </ul>
+          <a href="contact.html" class="btn">Anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IT Security -->
+  <section class="service-section" id="security">
+    <div class="container">
+      <div class="service-header reverse">
+        <div class="service-info">
+          <h2>IT-Security & Backup</h2>
+          <p>Sicherheit ist kein Optional — sie ist Grundvoraussetzung. Ich helfe Vorarlberger Unternehmen, ihre IT-Infrastruktur abzusichern: von Backup-Lösungen bis zu umfassenden Security-Audits.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Backup-Lösungen (lokal + Cloud)
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Security-Audit und Penetrationstesting
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Firewall- und Netzwerk-Konfiguration
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Mitarbeiter-Sensibilisierung (Phishing-Training)
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              DSGVO-konforme Datensicherung
+            </div>
           </div>
-        </a>
-        
-        <a href="services/managed-services.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-            </svg>
+        </div>
+        <div class="service-visual">
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step-num">1</div>
+              <div>
+                <h4>Audit</h4>
+                <p>Bestandsaufnahme Ihrer aktuellen IT-Sicherheit</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">2</div>
+              <div>
+                <h4>Risikoanalyse</h4>
+                <p>Schwachstellen identifizieren und priorisieren</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">3</div>
+              <div>
+                <h4>Maßnahmen</h4>
+                <p>Konkrete Schutzmaßnahmen implementieren</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">4</div>
+              <div>
+                <h4>Monitoring</h4>
+                <p>Laufende Überwachung und Reporting</p>
+              </div>
+            </div>
           </div>
-          <h3 class="service-card__title">Managed Services</h3>
-          <p class="service-card__description">Voller Managed-Service mit Monitoring, Updates und proaktivem Support.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €149 <span>/ Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud & Infrastructure -->
+  <section class="service-section" id="cloud">
+    <div class="container">
+      <div class="service-header">
+        <div class="service-info">
+          <h2>Cloud & Infrastructure</h2>
+          <p>Moderne IT-Infrastruktur muss nicht kompliziert sein. Ich unterstütze bei Cloud-Migration, Hosting-Setup und der Optimierung Ihrer Infrastruktur — ob on-premise, hybrid oder vollständig in der Cloud.</p>
+          <div class="service-features">
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Cloud-Migration (AWS, Azure, Hetzner)
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Docker-Container und Kubernetes-Setup
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              CI/CD-Pipeline-Setup (GitHub Actions)
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Monitoring und Alerting (Grafana, Prometheus)
+            </div>
+            <div class="service-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Cost-Optimization für Cloud-Ressourcen
+            </div>
           </div>
-        </a>
-        
-        <a href="services/cloud-solutions.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-            </svg>
+        </div>
+        <div class="service-visual">
+          <div class="use-cases">
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Server-Migration
+              </h4>
+              <p>Alt-Server ablösen und in die Cloud oder auf moderne Hardware umziehen.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                Workstation-Setup
+              </h4>
+              <p>Neue Arbeitsplätze einrichten, Software deployen, Hybrid-Cloud-Anbindung.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Wartung
+              </h4>
+              <p>Laufende Infrastructure-Wartung und Updates für Ihre Server.</p>
+            </div>
+            <div class="use-case">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+               VPN-Setup
+              </h4>
+              <p>Sichere Fernzugriffe für Remote-Teams einrichten.</p>
+            </div>
           </div>
-          <h3 class="service-card__title">Cloud Solutions</h3>
-          <p class="service-card__description">Flexible Cloud-Infrastruktur für Ihr Business — skalierbar, sicher und kosteneffizient.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €299 <span>/ Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-        
-        <a href="services/seo-marketing.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-              <line x1="11" y1="8" x2="11" y2="14"/>
-              <line x1="8" y1="11" x2="14" y2="11"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">SEO & Marketing</h3>
-          <p class="service-card__description">Gefunden werden und Leads generieren — mit datengetriebenem SEO und Online-Marketing.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €149 <span>/ Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-        
-        <a href="services/it-sicherheit.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">IT-Sicherheit</h3>
-          <p class="service-card__description">Umfassender Schutz für Ihre digitale Infrastruktur — von Firewall bis Penetrationstest.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €199 <span>/ Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-        
-        <a href="services/softwareentwicklung.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <polyline points="16 18 22 12 16 6"/>
-              <polyline points="8 6 2 12 8 18"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Softwareentwicklung</h3>
-          <p class="service-card__description">Maßgeschneiderte Softwarelösungen — von Web-Apps bis komplexen Business-Anwendungen.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €89 <span>/ Stunde</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-        
-        <a href="services/it-beratung.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">IT-Beratung</h3>
-          <p class="service-card__description">Strategische IT-Beratung für KMUs — von der Digitalisierungsstrategie bis zur Umsetzung.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €129 <span>/ Stunde</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-        
-        <a href="services/email-kommunikation.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">E-Mail & Kommunikation</h3>
-          <p class="service-card__description">Professionelle Business-E-Mail-Lösungen — sicher, zuverlässig und DSGVO-konform.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €5 <span>/ Postfach / Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
-        
-        <a href="services/wartung-support.html" class="service-card" style="text-decoration: none;">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Wartung & Support</h3>
-          <p class="service-card__description">Laufende Wartung und technischer Support für Ihre IT-Systeme.</p>
-          <div class="service-card__footer">
-            <div class="service-card__price">ab €79 <span>/ Monat</span></div>
-            <span class="card__link" style="color: var(--color-accent);">
-              Mehr erfahren →
-            </span>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="cta">
     <div class="container">
-      <h2 class="cta__title">Brauchen Sie mehrere Services?</h2>
-      <p class="cta__subtitle">Ich erstelle Ihnen gerne ein maßgeschneidertes Paket zu besonderen Konditionen.</p>
-      <div class="cta__actions">
-        <a href="contact.html" class="btn btn--primary btn--large">Paket anfragen</a>
+      <div class="cta-box">
+        <h2>Projekt im Sinn?</h2>
+        <p>Schreiben Sie mir ein kurzes Email oder rufen Sie an. Ich melde mich innerhalb von 24 Stunden.</p>
+        <div class="cta-buttons">
+          <a href="mailto:kontakt@devmiro.at" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            kontakt@devmiro.at
+          </a>
+          <a href="tel:+436641234567" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +43 664 123 4567
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand"><div class="footer__logo">DevMiro</div><p class="footer__tagline">IT-Dienstleistungen für Vorarlberg.</p></div>
-        <div class="footer__column"><h4>Leistungen</h4><ul class="footer__links"><li><a href="services/website-erstellung.html">Website-Erstellung</a></li><li><a href="services/web-hosting.html">Web Hosting</a></li><li><a href="services/managed-services.html">Managed Services</a></li><li><a href="services/cloud-solutions.html">Cloud Solutions</a></li></ul></div>
-        <div class="footer__column"><h4>Weitere</h4><ul class="footer__links"><li><a href="services/it-sicherheit.html">IT-Sicherheit</a></li><li><a href="services/softwareentwicklung.html">Softwareentwicklung</a></li><li><a href="services/it-beratung.html">IT-Beratung</a></li></ul></div>
-        <div class="footer__column"><h4>Kontakt</h4><ul class="footer__links"><li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li><li><a href="tel:+436761234567">+43 676 1234567</a></li></ul></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          DevMiro
+        </div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über mich</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="footer-copy">© 2025 DevMiro — IT-Dienstleistungen, Vorarlberg</div>
       </div>
-      <div class="footer__bottom"><p>© 2024 DevMiro</p><div class="footer__bottom-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>

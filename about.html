@@ -3,165 +3,257 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Über DevMiro — Timo Miro Gavanelli. IT-Professional aus Vorarlberg mit Fokus auf moderne Webentwicklung und Cloud-Lösungen.">
-  <title>Über Mich | DevMiro</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <title>Über mich — DevMiro | IT-Dienstleister Vorarlberg</title>
+  <meta name="description" content="Timo Miro Gavanelli — n8n Certified Expert für Workflow-Automatisierung und KI-Integration. Ansässig in Vorarlberg.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-marketing: #08090a;
+      --bg-panel: #0f1011;
+      --bg-surface: #191a1b;
+      --bg-card: rgba(255, 255, 255, 0.02);
+      --bg-card-hover: rgba(255, 255, 255, 0.05);
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-tertiary: #8a8f98;
+      --text-quaternary: #62666d;
+      --brand: #5e6ad2;
+      --accent: #7170ff;
+      --accent-hover: #828fff;
+      --accent-glow: rgba(113, 112, 255, 0.4);
+      --success-bright: #27a644;
+      --border-subtle: rgba(255, 255, 255, 0.05);
+      --border-default: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.12);
+      --border-brand: rgba(113, 112, 255, 0.3);
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+      --radius-pill: 9999px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; font-feature-settings: 'cv01', 'ss03'; }
+    body { font-family: var(--font-sans); background: var(--bg-marketing); color: var(--text-primary); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; cursor: pointer; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .bg-mesh {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(113, 112, 255, 0.12) 0%, transparent 50%);
+      animation: meshFloat 25s ease-in-out infinite;
+    }
+    @keyframes meshFloat { 0%, 100% { transform: translate(0, 0); } 33% { transform: translate(2%, 1%); } 66% { transform: translate(-1%, 2%); } }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8, 9, 10, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.125rem; font-weight: 510; letter-spacing: -0.24px; }
+    .nav-logo-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); }
+    .nav-logo-icon svg { width: 18px; height: 18px; color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 510; color: var(--text-tertiary); transition: color 150ms ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--brand); color: white; font-size: 0.875rem; font-weight: 510; border-radius: var(--radius-md); transition: all 150ms ease; }
+    .nav-cta:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 0 20px var(--accent-glow); }
+
+    .page-header { padding: 160px 0 80px; text-align: center; position: relative; z-index: 1; }
+    .page-header .section-label { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .page-header h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 510; letter-spacing: -1.584px; margin-bottom: 20px; }
+    .page-header p { font-size: 1.125rem; color: var(--text-tertiary); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .about-hero { padding: 0 0 96px; position: relative; z-index: 1; }
+    .about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-text h2 { font-size: 2rem; font-weight: 510; letter-spacing: -0.704px; margin-bottom: 20px; }
+    .about-text > p { font-size: 1rem; color: var(--text-tertiary); line-height: 1.7; margin-bottom: 16px; }
+    .credentials { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+    .credential { display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); }
+    .credential-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(113, 112, 255, 0.1); border-radius: var(--radius-md); flex-shrink: 0; }
+    .credential-icon svg { width: 22px; height: 22px; color: var(--accent); }
+    .credential h4 { font-size: 0.9375rem; font-weight: 590; margin-bottom: 4px; }
+    .credential p { font-size: 0.8125rem; color: var(--text-tertiary); }
+    .about-visual { display: flex; flex-direction: column; gap: 16px; }
+    .profile-card { padding: 32px; background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); text-align: center; }
+    .profile-avatar { width: 80px; height: 80px; background: linear-gradient(135deg, var(--brand) 0%, var(--accent) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; font-weight: 590; color: white; }
+    .profile-card h3 { font-size: 1.25rem; font-weight: 590; margin-bottom: 4px; }
+    .profile-card .role { font-size: 0.875rem; color: var(--accent); margin-bottom: 16px; }
+    .profile-card .location { font-size: 0.875rem; color: var(--text-tertiary); display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .profile-card .location svg { width: 14px; height: 14px; }
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-subtle); }
+    .stat-item { text-align: center; }
+    .stat-value { font-size: 1.5rem; font-weight: 510; letter-spacing: -0.504px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-label { font-size: 0.75rem; color: var(--text-tertiary); margin-top: 4px; }
+
+    .values-section { padding: 96px 0; background: var(--bg-panel); border-top: 1px solid var(--border-subtle); position: relative; z-index: 1; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-label { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 510; letter-spacing: -1.056px; margin-bottom: 16px; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .value-card { padding: 32px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); transition: all 200ms ease; }
+    .value-card:hover { border-color: var(--border-default); transform: translateY(-4px); }
+    .value-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(113, 112, 255, 0.08); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 20px; }
+    .value-icon svg { width: 24px; height: 24px; color: var(--accent); }
+    .value-card h3 { font-size: 1.125rem; font-weight: 590; margin-bottom: 12px; }
+    .value-card p { font-size: 0.9375rem; color: var(--text-tertiary); line-height: 1.6; }
+
+    .cta { padding: 96px 0; border-top: 1px solid var(--border-subtle); position: relative; z-index: 1; }
+    .cta-box { max-width: 720px; margin: 0 auto; padding: 48px; background: linear-gradient(135deg, rgba(94, 106, 210, 0.1) 0%, rgba(113, 112, 255, 0.05) 100%); border: 1px solid var(--border-brand); border-radius: var(--radius-xl); text-align: center; }
+    .cta-box h2 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 510; letter-spacing: -0.704px; margin-bottom: 16px; }
+    .cta-box > p { font-size: 1.0625rem; color: var(--text-tertiary); margin-bottom: 32px; }
+    .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--brand); color: white; font-size: 1rem; font-weight: 510; border-radius: var(--radius-md); border: none; cursor: pointer; transition: all 150ms ease; }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 0 30px var(--accent-glow); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--bg-card); color: var(--text-secondary); font-size: 1rem; font-weight: 510; border: 1px solid var(--border-default); border-radius: var(--radius-md); cursor: pointer; transition: all 150ms ease; }
+    .btn-ghost:hover { background: var(--bg-card-hover); border-color: var(--border-strong); color: var(--text-primary); }
+
+    .footer { padding: 48px 0; border-top: 1px solid var(--border-subtle); position: relative; z-index: 1; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 8px; font-size: 1rem; font-weight: 510; }
+    .footer-brand svg { width: 18px; height: 18px; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 0.875rem; color: var(--text-tertiary); transition: color 150ms ease; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 0.8125rem; color: var(--text-quaternary); }
+
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .page-header { padding: 140px 0 60px; }
+      .about-hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .cta-box { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
 </head>
 <body>
+  <div class="bg-mesh"></div>
+
   <nav class="nav">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="index.html" class="nav__logo">DevMiro</a>
-        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
-        <ul class="nav__links">
-          <li><a href="index.html" class="nav__link">Start</a></li>
-          <li><a href="services.html" class="nav__link">Leistungen</a></li>
-          <li><a href="pricing.html" class="nav__link">Preise</a></li>
-          <li><a href="about.html" class="nav__link nav__link--active">Über Mich</a></li>
-          <li><a href="contact.html" class="nav__link">Kontakt</a></li>
-        </ul>
-        <a href="contact.html" class="nav__cta">Kostenlose Beratung</a>
-      </div>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        DevMiro
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Leistungen</a></li>
+        <li><a href="about.html" class="active">Über mich</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Beratung anfragen</a>
     </div>
   </nav>
 
-  <section class="hero" style="padding-top: calc(var(--space-24) + 80px);">
+  <header class="page-header">
     <div class="container">
-      <div class="hero__badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-        </svg>
-        Über Mich
-      </div>
-      <h1 class="hero__title">Ich bin Timo Miro Gavanelli</h1>
-      <p class="hero__subtitle">
-        IT-Professional aus Vorarlberg mit Leidenschaft für moderne Technologien 
-        und Lösungen, die wirklich funktionieren.
-      </p>
+      <div class="section-label">Über mich</div>
+      <h1>Kein Konzern —<br>einer der anpackt</h1>
+      <p>Als Einzelunternehmer in Vorarlberg biete ich IT-Dienstleistungen ohne die Umwege großer Agenturen. Direkt, transparent und mit dem Ziel, messbare Ergebnisse zu liefern.</p>
     </div>
-  </section>
+  </header>
 
-  <section class="section">
+  <section class="about-hero">
     <div class="container">
-      <div class="grid grid--2" style="gap: var(--space-16); align-items: center;">
-        <div>
-          <h2 style="margin-bottom: var(--space-6);">Mein Weg</h2>
-          <p style="margin-bottom: var(--space-4);">
-            Seit über einem Jahrzehnt beschäftige ich mich mit Webentwicklung, Cloud-Infrastruktur 
-            und IT-Beratung. Was als Hobby begann, hat sich zu meiner Berufung entwickelt.
-          </p>
-          <p style="margin-bottom: var(--space-4);">
-            Ich habe für verschiedene Unternehmen gearbeitet — von Start-ups bis zu etablierten 
-            KMUs in Vorarlberg und ganz Österreich. Dabei habe ich gelernt, dass gute IT 
-            nicht kompliziert sein muss.
-          </p>
-          <p>
-            Heute konzentriere ich mich darauf, kleinen und mittleren Unternehmen zu helfen, 
-            ihre digitale Präsenz aufzubauen und zu optimieren. Qualität vor Quantität — 
-            ich arbeite lieber mit weniger Kunden intensiv zusammen als oberflächlich mit vielen.
-          </p>
-        </div>
-        <div style="text-align: center;">
-          <div style="width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent), #7C3AED); margin: 0 auto var(--space-8); display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 4rem;">👨‍💻</span>
+      <div class="about-hero-grid">
+        <div class="about-text">
+          <h2>Warum DevMiro?</h2>
+          <p>Ich habe jahrelang in der Software-Entwicklung und IT-Infrastruktur gearbeitet — für Startups, Agenturen und Unternehmen. Dabei habe ich eines gelernt: Die besten Lösungen entstehen, wenn man nicht nur Technik liefert, sondern Geschäftsprozesse versteht.</p>
+          <p>Deshalb konzentriere ich mich auf das, was KMUs wirklich voranbringt: Workflow-Automatisierung, KI-Integration und moderne Web-Entwicklung. Open-Source-Tools wie n8n ermöglichen es mir, DSGVO-konforme Lösungen zu bauen, die sich langfristig lohnen.</p>
+          <p>Mein Standort Vorarlberg ist kein Zufall — ich kenne die Strukturen und Bedürfnisse regionaler Unternehmen. Von Dornbirn bis Bregenz, von Feldkirch bis Rankweil.</p>
+          <div class="credentials">
+            <div class="credential">
+              <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <div>
+                <h4>n8n Certified Expert</h4>
+                <p>Offiziell zertifiziert für Workflow-Automatisierung</p>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div>
+                <h4>DSGVO-konform</h4>
+                <p>Alle Lösungen mit Datenschutz im Fokus</p>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div>
+                <h4>Vorarlberg Ansässig</h4>
+                <p>Vor-Ort-Beratung im Ländle</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container">
-      <header class="section-header">
-        <div class="section-header__badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-          Expertise
-        </div>
-        <h2 class="section-header__title">Was ich kann</h2>
-      </header>
-      
-      <div class="grid grid--3">
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><circle cx="8" cy="15" r="2"/><path d="M21 15l-5-5"/></svg>
+        <div class="about-visual">
+          <div class="profile-card">
+            <div class="profile-avatar">TM</div>
+            <h3>Timo Miro Gavanelli</h3>
+            <div class="role">IT-Dienstleister & Developer</div>
+            <div class="location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Vorarlberg, Österreich
+            </div>
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">Projekte</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">n8n</div>
+                <div class="stat-label">Certified</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Vorarlberg</div>
+              </div>
+            </div>
           </div>
-          <h3 class="card__title">Webentwicklung</h3>
-          <p class="card__text">Modernes HTML/CSS/JS, React, Next.js. Performante, SEO-optimierte Websites, die Ergebnisse liefern.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-          </div>
-          <h3 class="card__title">Cloud & DevOps</h3>
-          <p class="card__text">AWS, Google Cloud, Docker, Kubernetes. Skalierbare Infrastruktur, CI/CD, Infrastructure as Code.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="card__title">IT-Sicherheit</h3>
-          <p class="card__text">Security Audits, Firewall-Setup, DSGVO-Compliance. Sicherheit, die funktioniert.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h3 class="card__title">Backend & APIs</h3>
-          <p class="card__text">Node.js, Python, PostgreSQL. RESTful APIs, Datenbankdesign, Performance-Optimierung.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <h3 class="card__title">SEO & Performance</h3>
-          <p class="card__text">Technisches SEO, Core Web Vitals, PageSpeed-Optimierung. Gefunden werden und bleiben.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3 class="card__title">IT-Beratung</h3>
-          <p class="card__text">Digitalisierungsstrategie, Technologie-Beratung, Prozessoptimierung. Klar und pragmatisch.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="values-section">
     <div class="container">
-      <header class="section-header">
-        <div class="section-header__badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-            <polyline points="22 4 12 14.01 9 11.01"/>
-          </svg>
-          Werte
+      <div class="section-header">
+        <div class="section-label">Werte</div>
+        <h2 class="section-title">Wie ich arbeite</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3>Schnell & pragmatisch</h3>
+          <p>Keine endlosen Konzeptphasen. Ich liefere funktionierende Lösungen und iteriere basierend auf Feedback.</p>
         </div>
-        <h2 class="section-header__title">Wie ich arbeite</h2>
-      </header>
-      
-      <div class="grid grid--2" style="gap: var(--space-12);">
-        <div class="card">
-          <h3 class="card__title">Qualität vor Quantität</h3>
-          <p class="card__text">Ich nehme mir Zeit für jedes Projekt. Lieber weniger Aufträge, aber jeden davon richtig gut machen.</p>
+        <div class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Sicher & konform</h3>
+          <p>DSGVO ist kein Add-On — es ist Teil jeder Lösung. Open-Source-Tools wie n8n ermöglichen self-hosted, datenschutzkonforme Automatisierung.</p>
         </div>
-        <div class="card">
-          <h3 class="card__title">Transparenz</h3>
-          <p class="card__text">Klar kommuniziert, ehrliche Preise, keine versteckten Kosten. Sie wissen immer, woran Sie sind.</p>
+        <div class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Persönlich & direkt</h3>
+          <p>Sie haben einen Ansprechpartner — mich. Keine Callcenter, keine Weiterleitungen. Wenn Sie anrufen, bin ich da.</p>
         </div>
-        <div class="card">
-          <h3 class="card__title">Persönlicher Support</h3>
-          <p class="card__text">Kein Chatbot, keine Call-Center. Sie sprechen direkt mit mir — schnell und kompetent.</p>
+        <div class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>Transparent</h3>
+          <p>Klar kommunizierte Preise, keine versteckten Kosten. Sie wissen immer, wofür Sie bezahlen.</p>
         </div>
-        <div class="card">
-          <h3 class="card__title">Langfristige Partnerschaften</h3>
-          <p class="card__text">Ich möchte, dass meine Kunden langfristig erfolgreich sind. Das ist mein Erfolgsmaßstab.</p>
+        <div class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Modern</h3>
+          <p>Ich setze auf aktuelle Technologien und bewährte Open-Source-Lösungen — keine veralteten Systeme.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <h3>Support danach</h3>
+          <p>Nach dem Launch bin ich nicht weg. Support und Wartung sind Teil des Services.</p>
         </div>
       </div>
     </div>
@@ -169,25 +261,38 @@
 
   <section class="cta">
     <div class="container">
-      <h2 class="cta__title">Lernen wir uns kennen!</h2>
-      <p class="cta__subtitle">Kostenloses Erstgespräch — ich freue mich auf Ihre Herausforderung.</p>
-      <div class="cta__actions">
-        <a href="contact.html" class="btn btn--primary btn--large">Kontakt aufnehmen</a>
+      <div class="cta-box">
+        <h2>Lassen Sie uns zusammenarbeiten</h2>
+        <p>Schreiben Sie mir ein kurzes Email oder rufen Sie an. Ich melde mich innerhalb von 24 Stunden.</p>
+        <div class="cta-buttons">
+          <a href="mailto:kontakt@devmiro.at" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            kontakt@devmiro.at
+          </a>
+          <a href="tel:+436641234567" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +43 664 123 4567
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand"><div class="footer__logo">DevMiro</div><p class="footer__tagline">IT-Dienstleistungen für Vorarlberg.</p></div>
-        <div class="footer__column"><h4>Leistungen</h4><ul class="footer__links"><li><a href="services/website-erstellung.html">Website-Erstellung</a></li><li><a href="services/web-hosting.html">Web Hosting</a></li><li><a href="services/managed-services.html">Managed Services</a></li><li><a href="services/cloud-solutions.html">Cloud Solutions</a></li></ul></div>
-        <div class="footer__column"><h4>Weitere</h4><ul class="footer__links"><li><a href="services/it-sicherheit.html">IT-Sicherheit</a></li><li><a href="services/softwareentwicklung.html">Softwareentwicklung</a></li><li><a href="services/it-beratung.html">IT-Beratung</a></li></ul></div>
-        <div class="footer__column"><h4>Kontakt</h4><ul class="footer__links"><li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li><li><a href="tel:+436761234567">+43 676 1234567</a></li></ul></div>
+      <div class="footer-inner">
+        <div class="footer-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>DevMiro</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über mich</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="footer-copy">© 2025 DevMiro — IT-Dienstleistungen, Vorarlberg</div>
       </div>
-      <div class="footer__bottom"><p>© 2024 DevMiro</p><div class="footer__bottom-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>

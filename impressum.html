@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum — DevMiro</title>
+  <title>Impressum — DevMiro | IT-Dienstleistungen Vorarlberg</title>
+  <meta name="description" content="Impressum und rechtliche Angaben von DevMiro — Timo Miro Gavanelli, IT-Dienstleistungen, Vorarlberg.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;510;590&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-marketing: #08090a;
@@ -15,104 +16,110 @@
       --text-primary: #f7f8f8;
       --text-secondary: #d0d6e0;
       --text-tertiary: #8a8f98;
+      --text-quaternary: #62666d;
+      --brand: #5e6ad2;
       --accent: #7170ff;
+      --accent-hover: #828fff;
       --border-subtle: rgba(255, 255, 255, 0.05);
       --border-default: rgba(255, 255, 255, 0.08);
       --font-sans: 'Inter', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-feature-settings: 'cv01', 'ss03'; }
-    body {
-      font-family: var(--font-sans);
-      background: var(--bg-marketing);
-      color: var(--text-primary);
-      line-height: 1.6;
-      padding: 100px 24px;
-    }
-    .container { max-width: 700px; margin: 0 auto; }
-    .back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 40px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text-tertiary);
-      text-decoration: none;
-      transition: color 150ms ease;
-    }
-    .back:hover { color: var(--text-primary); }
-    .back svg { width: 16px; height: 16px; }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 510;
-      letter-spacing: -1.056px;
-      margin-bottom: 40px;
-      background: linear-gradient(135deg, var(--accent) 0%, #828fff 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    h2 {
-      font-size: 1rem;
-      font-weight: 590;
-      letter-spacing: -0.13px;
-      color: var(--text-secondary);
-      margin: 32px 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    p {
-      font-size: 0.9375rem;
-      color: var(--text-tertiary);
-      margin-bottom: 12px;
-    }
-    .card {
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      margin: 16px 0;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; font-feature-settings: 'cv01', 'ss03'; }
+    body { font-family: var(--font-sans); background: var(--bg-marketing); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; transition: color 150ms ease; }
+    a:hover { color: var(--accent-hover); }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .bg-mesh { position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(113, 112, 255, 0.12) 0%, transparent 50%); }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8, 9, 10, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.125rem; font-weight: 510; letter-spacing: -0.24px; }
+    .nav-logo-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); }
+    .nav-logo-icon svg { width: 18px; height: 18px; color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 510; color: var(--text-tertiary); transition: color 150ms ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--brand); color: white; font-size: 0.875rem; font-weight: 510; border-radius: var(--radius-md); transition: all 150ms ease; }
+    .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
+    .page-header { padding: 140px 0 60px; position: relative; z-index: 1; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px; font-size: 0.875rem; font-weight: 510; color: var(--text-tertiary); transition: color 150ms ease; }
+    .back-link:hover { color: var(--text-primary); }
+    .back-link svg { width: 16px; height: 16px; }
+    h1 { font-size: 2.5rem; font-weight: 510; letter-spacing: -1.056px; margin-bottom: 48px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    h2 { font-size: 0.875rem; font-weight: 590; color: var(--text-secondary); margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-subtle); text-transform: uppercase; letter-spacing: 0.05em; }
+    p { font-size: 0.9375rem; color: var(--text-tertiary); margin-bottom: 12px; }
+    .card { padding: 20px; background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin: 16px 0; }
     .card p { margin-bottom: 0; }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 150ms ease;
-    }
-    a:hover { color: #828fff; }
-    strong { color: var(--text-secondary); font-weight: 590; }
+    .card strong { color: var(--text-primary); }
+    .footer { padding: 48px 0; border-top: 1px solid var(--border-subtle); position: relative; z-index: 1; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 8px; font-size: 1rem; font-weight: 510; }
+    .footer-brand svg { width: 18px; height: 18px; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 0.875rem; color: var(--text-tertiary); transition: color 150ms ease; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 0.8125rem; color: var(--text-quaternary); }
+    @media (max-width: 768px) { .nav-links { display: none; } .page-header { padding: 120px 0 40px; } h1 { font-size: 2rem; } .footer-inner { flex-direction: column; text-align: center; } .footer-links { justify-content: center; } }
   </style>
 </head>
 <body>
+  <div class="bg-mesh"></div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>DevMiro</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Leistungen</a></li>
+        <li><a href="about.html">Über mich</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Beratung anfragen</a>
+    </div>
+  </nav>
   <div class="container">
-    <a href="index.html" class="back">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
-      Zurück zur Startseite
-    </a>
-    <h1>Impressum</h1>
-    <h2>Angaben gemäß § 5 ECG</h2>
-    <div class="card">
-      <p><strong>Timo Miro Gavanelli</strong></p>
-      <p>IT-Dienstleistungen<br>Vorarlberg, Österreich</p>
-    </div>
-    <h2>Kontakt</h2>
-    <div class="card">
-      <p>E-Mail: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a></p>
-      <p>Telefon: <a href="tel:+436641234567">+43 664 123 4567</a></p>
-    </div>
-    <h2>UID-Nummer</h2>
-    <p>ATU12345678</p>
-    <h2>Gewerbebehörde</h2>
-    <p>Bezirkshauptstadt Dornbirn</p>
-    <h2>Mitgliedschaft</h2>
-    <p>Wirtschaftskammer Vorarlberg</p>
-    <h2>Online-Streitbeilegung</h2>
-    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr/</a></p>
-    <p>Meine E-Mail-Adresse: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a></p>
+    <header class="page-header">
+      <a href="index.html" class="back-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Zurück</a>
+      <h1>Impressum</h1>
+      <h2>Angaben gemäß § 5 ECG</h2>
+      <div class="card">
+        <p><strong>Timo Miro Gavanelli</strong></p>
+        <p>IT-Dienstleistungen<br>Vorarlberg, Österreich</p>
+      </div>
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p>E-Mail: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a></p>
+        <p>Telefon: <a href="tel:+436641234567">+43 664 123 4567</a></p>
+      </div>
+      <h2>UID-Nummer</h2>
+      <p>ATU12345678</p>
+      <h2>Gewerbebehörde</h2>
+      <p>Bezirkshauptstadt Dornbirn</p>
+      <h2>Mitgliedschaft</h2>
+      <p>Wirtschaftskammer Vorarlberg</p>
+      <h2>Online-Streitbeilegung</h2>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr/</a></p>
+      <p>Meine E-Mail-Adresse: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a></p>
+    </header>
   </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>DevMiro</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über mich</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="footer-copy">© 2025 DevMiro — IT-Dienstleistungen, Vorarlberg</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
