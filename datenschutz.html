@@ -3,122 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Datenschutzerklärung — DevMiro. Informationen zum Umgang mit personenbezogenen Daten gemäß DSGVO.">
-  <title>Datenschutzerklärung | DevMiro</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Datenschutzerklärung — DevMiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;510;590&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-marketing: #08090a;
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-tertiary: #8a8f98;
+      --accent-violet: #7170ff;
+      --border-subtle: rgba(255,255,255,0.05);
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-marketing);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 80px 24px;
+    }
+    .container { max-width: 700px; margin: 0 auto; }
+    h1 { font-size: 2rem; font-weight: 590; margin-bottom: 32px; letter-spacing: -0.704px; }
+    h2 { font-size: 1.125rem; font-weight: 590; color: var(--text-secondary); margin: 32px 0 16px; }
+    p { color: var(--text-tertiary); margin-bottom: 16px; }
+    a { color: var(--accent-violet); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-bottom: 32px; color: var(--text-tertiary); font-size: 0.875rem; }
+  </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="index.html" class="nav__logo">DevMiro</a>
-        <button class="nav__toggle" aria-label="Menü"><span></span><span></span><span></span></button>
-        <ul class="nav__links">
-          <li><a href="index.html" class="nav__link">Start</a></li>
-          <li><a href="services.html" class="nav__link">Leistungen</a></li>
-          <li><a href="pricing.html" class="nav__link">Preise</a></li>
-          <li><a href="about.html" class="nav__link">Über Mich</a></li>
-          <li><a href="contact.html" class="nav__link">Kontakt</a></li>
-        </ul>
-        <a href="contact.html" class="nav__cta">Kostenlose Beratung</a>
-      </div>
-    </div>
-  </nav>
-
-  <section class="section" style="padding-top: calc(var(--space-24) + 80px);">
-    <div class="container">
-      <h1 style="margin-bottom: var(--space-8);">Datenschutzerklärung</h1>
-      <p style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">Stand: 2024</p>
-      
-      <div style="max-width: 700px;">
-        <h2 style="margin-bottom: var(--space-4); margin-top: var(--space-8);">1. Datenschutz auf einen Blick</h2>
-        
-        <h3 style="margin-bottom: var(--space-2); margin-top: var(--space-6);">Allgemeine Hinweise</h3>
-        <p style="color: var(--color-text-secondary);">
-          Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
-          personenbezogenen Daten passiert, wenn Sie diese Website besuchen. 
-          Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert 
-          werden können.
-        </p>
-        
-        <h3 style="margin-bottom: var(--space-2); margin-top: var(--space-6);">Datenerfassung auf dieser Website</h3>
-        <p style="color: var(--color-text-secondary);">
-          <strong>Wer ist verantwortlich für die Datenerfassung?</strong><br>
-          Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. 
-          Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
-        </p>
-        
-        <h2 style="margin-bottom: var(--space-4); margin-top: var(--space-8);">2. Datenerfassung auf dieser Website</h2>
-        
-        <h3 style="margin-bottom: var(--space-2); margin-top: var(--space-6);">Kontaktformular</h3>
-        <p style="color: var(--color-text-secondary);">
-          Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben 
-          aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten 
-          zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert. 
-          Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.
-        </p>
-        
-        <h3 style="margin-bottom: var(--space-2); margin-top: var(--space-6);">Hosting</h3>
-        <p style="color: var(--color-text-secondary);">
-          Diese Website wird bei einem externen Dienstleister gehostet (Hoster). 
-          Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden 
-          auf den Servern des Hosters gespeichert.
-        </p>
-        
-        <h2 style="margin-bottom: var(--space-4); margin-top: var(--space-8);">3. Ihre Rechte</h2>
-        <p style="color: var(--color-text-secondary);">
-          Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger 
-          und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben 
-          außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. 
-          Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie 
-          diese Einwilligung jederzeit für die Zukunft widerrufen.
-        </p>
-        <p style="color: var(--color-text-secondary); margin-top: var(--space-4);">
-          Die zuständige Aufsichtsbehörde für den Datenschutz in Österreich ist die 
-          <strong>Datenschutzbehörde</strong>.
-        </p>
-        
-        <h2 style="margin-bottom: var(--space-4); margin-top: var(--space-8);">4. Externe Dienste</h2>
-        
-        <h3 style="margin-bottom: var(--space-2); margin-top: var(--space-6);">Google Fonts</h3>
-        <p style="color: var(--color-text-secondary);">
-          Diese Website nutzt Google Fonts zur einheitlichen Darstellung von Schriftarten. 
-          Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren Browsercache, 
-          um Texte und Schriftarten korrekt anzuzeigen.
-        </p>
-        
-        <h2 style="margin-bottom: var(--space-4); margin-top: var(--space-8);">5. SSL-Verschlüsselung</h2>
-        <p style="color: var(--color-text-secondary);">
-          Diese Website nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung. Eine 
-          verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des 
-          Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol 
-          in Ihrer Browserzeile.
-        </p>
-        
-        <h2 style="margin-bottom: var(--space-4); margin-top: var(--space-8);">Kontakt bei Datenschutzfragen</h2>
-        <p style="color: var(--color-text-secondary);">
-          Bei Fragen zum Datenschutz können Sie sich jederzeit an mich wenden:<br><br>
-          <strong>Timo Miro Gavanelli</strong><br>
-          E-Mail: <a href="mailto:hello@devmiro.at" style="color: var(--color-accent);">hello@devmiro.at</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand"><div class="footer__logo">DevMiro</div><p class="footer__tagline">IT-Dienstleistungen für Vorarlberg.</p></div>
-        <div class="footer__column"><h4>Leistungen</h4><ul class="footer__links"><li><a href="services/website-erstellung.html">Website-Erstellung</a></li><li><a href="services/web-hosting.html">Web Hosting</a></li><li><a href="services/managed-services.html">Managed Services</a></li><li><a href="services/cloud-solutions.html">Cloud Solutions</a></li></ul></div>
-        <div class="footer__column"><h4>Weitere</h4><ul class="footer__links"><li><a href="services/it-sicherheit.html">IT-Sicherheit</a></li><li><a href="services/softwareentwicklung.html">Softwareentwicklung</a></li><li><a href="services/it-beratung.html">IT-Beratung</a></li></ul></div>
-        <div class="footer__column"><h4>Kontakt</h4><ul class="footer__links"><li><a href="mailto:hello@devmiro.at">hello@devmiro.at</a></li><li><a href="tel:+436761234567">+43 676 1234567</a></li></ul></div>
-      </div>
-      <div class="footer__bottom"><p>© 2024 DevMiro</p><div class="footer__bottom-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div>
-    </div>
-  </footer>
+  <div class="container">
+    <a href="index.html" class="back">← Zurück zur Startseite</a>
+    <h1>Datenschutzerklärung</h1>
+    
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      Timo Miro Gavanelli<br>
+      IT-Dienstleistungen<br>
+      E-Mail: <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a>
+    </p>
+    
+    <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
+    <p>Meine Website dient ausschließlich der Darstellung meiner Dienstleistungen. Es werden keine personenbezogenen Daten automatisch erhoben.</p>
+    
+    <h2>3. Kontaktaufnahme</h2>
+    <p>Wenn Sie per E-Mail oder Telefon Kontakt mit mir aufnehmen, werden Ihre Angaben (Name, E-Mail-Adresse, Telefonnummer) ausschließlich zum Zweck der Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
+    
+    <h2>4. Google Fonts</h2>
+    <p>Diese Website verwendet Google Fonts (Inter) für die Darstellung von Schriftarten. Die Einbindung erfolgt datenschutzkonform. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a></p>
+    
+    <h2>5. Ihre Rechte</h2>
+    <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Bei Fragen wenden Sie sich bitte an <a href="mailto:kontakt@devmiro.at">kontakt@devmiro.at</a>.</p>
+    
+    <h2>6. Speicherdauer</h2>
+    <p>Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p>
+  </div>
 </body>
 </html>

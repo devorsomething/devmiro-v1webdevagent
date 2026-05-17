@@ -3,20 +3,681 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevMiro Minimal</title>
+  <title>DevMiro — IT-Lösungen für Unternehmen | Vorarlberg</title>
+  <meta name="description" content="Professionelle IT-Lösungen in Vorarlberg: Workflow-Automatisierung, KI-Integration und Web-Entwicklung für KMUs.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600&display=swap" rel="stylesheet">
+  
   <style>
-    body { margin: 0; padding: 40px; font-family: sans-serif; background: #fff; color: #333; }
-    .nav { background: #fff; padding: 20px; border-bottom: 2px solid #0369A1; }
-    h1 { color: #0369A1; margin: 60px 0 20px; }
-    .btn { background: #0369A1; color: white; padding: 15px 30px; display: inline-block; text-decoration: none; }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Colors */
+      --bg-marketing: #08090a;
+      --bg-panel: #0f1011;
+      --bg-surface: #191a1b;
+      --bg-elevated: #28282c;
+      
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-tertiary: #8a8f98;
+      --text-quaternary: #62666d;
+      
+      --accent-brand: #5e6ad2;
+      --accent-violet: #7170ff;
+      --accent-hover: #828fff;
+      --accent-security: #7a7fad;
+      
+      --success: #10b981;
+      --green: #27a644;
+      
+      --border-primary: #23252a;
+      --border-secondary: #34343a;
+      --border-subtle: rgba(255,255,255,0.05);
+      --border-standard: rgba(255,255,255,0.08);
+      
+      /* Spacing */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-20: 80px;
+      --space-24: 96px;
+      
+      /* Typography */
+      --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-marketing);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(8, 9, 10, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-4) var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 1.125rem;
+      font-weight: 590;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.24px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 510;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-2) var(--space-4);
+      background: var(--accent-brand);
+      color: var(--text-primary);
+      font-size: 0.875rem;
+      font-weight: 510;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 150ms ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 160px var(--space-6) var(--space-20);
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      background: rgba(113, 112, 255, 0.1);
+      border: 1px solid rgba(113, 112, 255, 0.2);
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 510;
+      color: var(--accent-violet);
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-violet);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin: 0 auto var(--space-6);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 510;
+      line-height: 1;
+      letter-spacing: -1.584px;
+      color: var(--text-primary);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto var(--space-8);
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      background: var(--accent-brand);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      font-weight: 510;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 150ms ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      background: rgba(255,255,255,0.02);
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      font-weight: 510;
+      text-decoration: none;
+      border: 1px solid var(--border-standard);
+      border-radius: 6px;
+      transition: all 150ms ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      color: var(--text-primary);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-6);
+    }
+
+    /* Stats */
+    .stats {
+      padding: var(--space-16) 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-8);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 590;
+      letter-spacing: -1.056px;
+      color: var(--text-primary);
+      margin-bottom: var(--space-2);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--text-tertiary);
+    }
+
+    /* Services */
+    .services {
+      padding: var(--space-20) 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 510;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      margin-bottom: var(--space-3);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 510;
+      letter-spacing: -0.704px;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+    }
+
+    .section-desc {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-6);
+    }
+
+    .service-card {
+      padding: var(--space-6);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-standard);
+      border-radius: 8px;
+      transition: all 200ms ease;
+    }
+
+    .service-card:hover {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(113, 112, 255, 0.1);
+      border-radius: 8px;
+      margin-bottom: var(--space-4);
+    }
+
+    .service-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-violet);
+    }
+
+    .service-card h3 {
+      font-size: 1.125rem;
+      font-weight: 590;
+      color: var(--text-primary);
+      margin-bottom: var(--space-3);
+    }
+
+    .service-card p {
+      font-size: 0.9375rem;
+      color: var(--text-tertiary);
+      line-height: 1.6;
+    }
+
+    /* Tools */
+    .tools {
+      padding: var(--space-20) 0;
+      background: var(--bg-panel);
+    }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-8);
+    }
+
+    .tool-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 510;
+      color: var(--text-secondary);
+    }
+
+    .tool-item::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+    }
+
+    /* CTA */
+    .cta {
+      padding: var(--space-24) var(--space-6);
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: var(--space-12);
+      background: linear-gradient(135deg, rgba(94, 106, 210, 0.1) 0%, rgba(113, 112, 255, 0.05) 100%);
+      border: 1px solid rgba(113, 112, 255, 0.2);
+      border-radius: 12px;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 510;
+      letter-spacing: -0.704px;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+    }
+
+    .cta p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-8);
+    }
+
+    /* Footer */
+    .footer {
+      padding: var(--space-12) var(--space-6);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+    }
+
+    .footer-brand {
+      font-size: 1rem;
+      font-weight: 590;
+      color: var(--text-primary);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-6);
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    .footer-copy {
+      font-size: 0.8125rem;
+      color: var(--text-quaternary);
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 120px var(--space-6) var(--space-16);
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+
+    /* Focus states */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent-violet);
+      outline-offset: 2px;
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav class="nav">DevMiro - SIMPLE WHITE NAV</nav>
-  <main>
-    <h1>Professionelle IT-Lösungen</h1>
-    <p>Einfach, weiß, ohne Probleme.</p>
-    <a href="services.html" class="btn">Leistungen</a>
-  </main>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">DevMiro</a>
+      <ul class="nav-links">
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#kontakt" class="nav-cta">Beratung anfragen</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">Verfügbar für neue Projekte</div>
+    <h1>IT-Lösungen, die<br>Ihrem Unternehmen helfen</h1>
+    <p>Ich helfe Vorarlberger Unternehmen, manuelle Prozesse zu automatisieren und digitale Effizienz zu steigern — mit KI-Integration, n8n-Workflows und moderner Web-Entwicklung.</p>
+    <div class="hero-buttons">
+      <a href="#kontakt" class="btn-primary">
+        Kostenlose Beratung
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn-ghost">Mehr erfahren</a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">50+</div>
+          <div class="stat-label">Automatisierte Workflows</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">n8n</div>
+          <div class="stat-label">Certified Expert</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">KI-Systeme im Einsatz</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Vorarlberg Ansässig</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Leistungen</div>
+        <h2 class="section-title">Was ich für Sie tun kann</h2>
+        <p class="section-desc">Maßgeschneiderte Lösungen für Ihre spezifischen Geschäftsprozesse — von der Automatisierung bis zur vollständigen Web-Anwendung.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Workflow-Automatisierung</h3>
+          <p>Manuelle repetitive Aufgaben eliminieren. Ich baue n8n-Workflows, die Daten zwischen Ihren Systemen automatisch synchronisieren und Prozesse im Hintergrund erledigen.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="6"/></svg>
+          </div>
+          <h3>KI-Integration</h3>
+          <p>OpenAI, Claude, lokale LLMs — ich integriere KI-Fähigkeiten in Ihre bestehenden Prozesse. Von Chatbots bis zu RAG-Systemen für Ihr Wissen.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Web-Entwicklung</h3>
+          <p>Moderne, schnelle Web-Anwendungen mit React, Next.js oder statischem HTML. Landing Pages, Web-Apps oder komplexe Plattformen — alles möglich.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Prozess-Beratung</h3>
+          <p>Analyse Ihrer aktuellen Arbeitsabläufe und Identifikation von Automatisierungspotenzialen. Konkrete Handlungsempfehlungen ohne Buzzwords.</p>
+        </div>
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>API-Entwicklung</h3>
+          <p>REST-APIs und Webhooks für die Anbindung Ihrer Systeme. Node.js Backend mit TypeScript, Express oder Fastify.</p>
+        </div>
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Wartung & Support</h3>
+          <p>laufende Betreuung Ihrer automatisierten Systeme. Monitoring, Fehlerbehebung und Weiterentwicklung nach Bedarf.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="tools" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Technologie-Stack</div>
+        <h2 class="section-title">Werkzeuge & Technologien</h2>
+        <p class="section-desc">Bewährte Open-Source- und Cloud-Lösungen, die ich täglich einsetze.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-item">n8n</div>
+        <div class="tool-item">OpenAI</div>
+        <div class="tool-item">Claude</div>
+        <div class="tool-item">React</div>
+        <div class="tool-item">Next.js</div>
+        <div class="tool-item">Node.js</div>
+        <div class="tool-item">TypeScript</div>
+        <div class="tool-item">PostgreSQL</div>
+        <div class="tool-item">Docker</div>
+        <div class="tool-item">GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="kontakt">
+    <div class="cta-box">
+      <h2>Bereit, Ihre Prozesse zu automatisieren?</h2>
+      <p>Schreiben Sie mir ein kurzes Email oder rufen Sie an. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+      <div class="hero-buttons">
+        <a href="mailto:kontakt@devmiro.at" class="btn-primary">kontakt@devmiro.at</a>
+        <a href="tel:+436641234567" class="btn-ghost">+43 664 123 4567</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">DevMiro</div>
+      <ul class="footer-links">
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <div class="footer-copy">© 2025 DevMiro — IT-Dienstleistungen, Vorarlberg</div>
+    </div>
+  </footer>
 </body>
 </html>
